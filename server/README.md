@@ -15,4 +15,10 @@
 > 
 > Response: Status code 200 on success, response body is JSON with an array of every protest inside the data key and a 'success' Boolean. The keys for each protest object are:
 > 
-> ['_id', 'name', 'time', 'description', 'organizer', 'location', 'status']
+> ['_id', 'name', 'time', 'description', 'organizer', 'location', 'status', 'protestorCount']
+
+### /join_protest (POST)
+
+> Join an existing protest, by _id. Takes a JSON input with the 'username' key and 'protestID' key.
+> 
+> Response: Status code 200 on success, request body is JSON with a 'success' Boolean and a 'msg' response message.

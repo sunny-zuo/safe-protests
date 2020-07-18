@@ -48,6 +48,10 @@ app.get('/get_protests', async (req, res) => {
 
     try {
         let data = await database.getProtests(skip);
+        for (let i = 0; i < Object.keys(data).length; i++) {
+            data[i].protestorCount = Object.keys(data[i].protestors).length;
+            delete data[i].protestors;
+        }
         res.status(200).send({data: data, success: true});
     } catch (err) {
         res.status(503).send({success: false, msg: 'Internal Server Error'});
