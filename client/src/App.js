@@ -8,9 +8,9 @@ const App = () => {
 	const [users, setUser] = useState([]);
 
 	return (
-		<div>
-			<Routes loggedIn={loggedIn} setLogin={setLogin} users={users} />
+		<div style={{marginTop: '90px'}}>
 			<Toolbar></Toolbar>
+			<Routes loggedIn={loggedIn} setLogin={setLogin} users={users} />
 		</div>
 	);
 };

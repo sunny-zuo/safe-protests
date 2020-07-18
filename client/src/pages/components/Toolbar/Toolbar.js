@@ -6,13 +6,9 @@ import usericon from "./../../img/user-icon.png";
 const toolbar = props => (
     <header className="toolbar">
         <nav className="toolbar-nav">
-        <div>
-            <ul>
-                <li className="profile-pic"><img src={menuicon}></img></li>
-                {/* We can also dynamically update the user icon */}
-                <li className="sidebar-icon"><img src={usericon}></img></li>
-            </ul>
-        </div>
+            {/* We can also dynamically update the user icon when signed in */}
+            <div className="sidebar-icon"><img src={menuicon}></img></div>
+            <div className="profile-pic"><img src={usericon}></img></div>
         </nav> 
     </header>
 
