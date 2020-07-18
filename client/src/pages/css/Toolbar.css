@@ -1,0 +1,23 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #88F0EA;
+    height: 70px;
+}
+
+.toolbar-nav {
+    /* display: flex; */
+    height: 100%;
+    align-items: center;
+    padding: .7rem 1rem;
+}
+
+.profile-pic {
+    float: right;
+}
+
+.sidebar-icon {
+    float: left;
+}
