@@ -1,7 +1,9 @@
 const database = require('./database')
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.post('/add_protest', function(req, res, next) {
@@ -20,6 +22,7 @@ app.post('/add_protest', function(req, res) {
 
     let keys = Object.keys(req.body);
     if (JSON.stringify(keys) === JSON.stringify(['name', 'time', 'description', 'organizer', 'location'])) {
+        req.body.status = 'active';
         console.log(req.body);
         try {
             database.insertProtest(req.body);
