@@ -20,8 +20,8 @@ app.post('/add_protest', function(req, res) {
     let resMsg = 'Request body did not contain all needed information';
     let resCode = 403;
 
-    let keys = Object.keys(req.body);
-    if (JSON.stringify(keys) === JSON.stringify(['name', 'time', 'description', 'organizer', 'location'])) {
+    let json = req.body;
+    if (json.name && json.time && json.description && json.organizer && json.location) {
         req.body.status = 'active';
         console.log(req.body);
         try {
@@ -64,10 +64,10 @@ app.post('/join_protest', function (req, res, next) {
 });
 
 app.post('/join_protest', function (req, res) {
-    let keys = Object.keys(req.body);
-    if (JSON.stringify(keys) === JSON.stringify(['username', 'protestID'])) {
+    let json = req.body;
+    if (json.protestID && json.username) {
         try {
-            database.addProtestUser(req.body.username, req.body.protestID);
+            database.addProtestUser(json.username, json.protestID);
             res.status(200).send({success: true, msg: 'Success'});
         } catch (err) {
             res.status(503).send({ success: false, msg: 'Internal Server Error' });
