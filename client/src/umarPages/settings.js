@@ -1,10 +1,10 @@
 import React from 'react';
-import home from './home';
  
-const yourRights = () => {
+const settings = () => {
     return (
        <div>
-          <p>Your Rights</p>
+          <h1>Settings</h1>
+           <p>Lorem Ispus</p>
        </div>
     );
 }
