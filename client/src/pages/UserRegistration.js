@@ -6,11 +6,16 @@ class UserRegistration extends Component {
 		super(props);
 		//state of the user registration page
 		this.state = {
-			registered: "false",
+			registered: false,
 			name: "",
 			email: "",
 			password: "",
 			confirmpasswordPassword: "",
+			nameError: "",
+			emailError: "",
+			passwordError: "",
+			confirmPasswordError: "",
+			error: "",
 		};
 		this._isMounted = false;
 	}
@@ -33,7 +38,7 @@ class UserRegistration extends Component {
 		let nameError = "";
 		let emailError = "";
 		let passwordError = "";
-		let confirmpasswordError = "";
+		let confirmPasswordError = "";
 		let errorExists = 0;
 
 		if (!this.state.name) {
@@ -55,10 +60,10 @@ class UserRegistration extends Component {
 		}
 
 		if (!this.state.confirmpassword) {
-			confirmpasswordError = "This field cannot be blank";
+			confirmPasswordError = "This field cannot be blank";
 			errorExists = 1;
 		} else if (this.state.confirmpassword !== this.state.password) {
-			confirmpasswordError = "Passwords do not match";
+			confirmPasswordError = "Passwords do not match";
 			errorExists = 1;
 		}
 
@@ -66,7 +71,7 @@ class UserRegistration extends Component {
 			nameError: nameError,
 			emailError: emailError,
 			passwordError: passwordError,
-			confirmPasswordError: confirmpasswordError,
+			confirmPasswordError: confirmPasswordError,
 		});
 
 		if (errorExists) {
@@ -83,10 +88,18 @@ class UserRegistration extends Component {
 		if (valid) {
 			console.log("User " + this.state.name + " is signed up!\n");
 			this.updateState({ registered: true, error: "" });
-			// **DONT FORGET TO add user to userpool
+			this.props.setUser((prev) =>
+				prev.concat([
+					{
+						name: this.state.name,
+						email: this.state.email,
+						password: this.state.password,
+					},
+				])
+			);
 		} else {
 			this.updateState({
-				error: "Error signing up.  Please try again later",
+				error: "Error signing up. Please try again later",
 			});
 		}
 	};
@@ -111,7 +124,7 @@ class UserRegistration extends Component {
 							onFocus={() => this.updateState({ nameError: "" })}
 							onChange={(e) => this.updateState({ name: e.target.value })}
 						/>
-						<div id="error-box">{this.state.nameError}</div>
+						<div className="error-box">{this.state.nameError}</div>
 
 						{/* Email Input */}
 						<p className="label"> Email </p>
@@ -124,7 +137,7 @@ class UserRegistration extends Component {
 							onFocus={() => this.updateState({ emailError: "" })}
 							onChange={(e) => this.updateState({ email: e.target.value })}
 						/>
-						<div id="error-box">{this.state.emailError}</div>
+						<div className="error-box">{this.state.emailError}</div>
 
 						{/* Password Input */}
 						<p className="label"> Password </p>
@@ -137,9 +150,10 @@ class UserRegistration extends Component {
 							onFocus={() => this.updateState({ passwordError: "" })}
 							onChange={(e) => this.updateState({ password: e.target.value })}
 						/>
-						<div id="error-box">{this.state.passwordError}</div>
+						<div className="error-box">{this.state.passwordError}</div>
 
 						{/* Confirm Password Input */}
+						<p className="label"> Confirm Password </p>
 						<input
 							className="box-input"
 							type="password"
@@ -153,8 +167,12 @@ class UserRegistration extends Component {
 								})
 							}
 						/>
+						<div className="error-box">{this.state.confirmPasswordError}</div>
+						<div className="error-box">{this.state.error}</div>
 					</form>
 
+					<br />
+					<br />
 					<Link to="/login" className="btn btn-link">
 						<div>Login to an existing account</div>
 					</Link>

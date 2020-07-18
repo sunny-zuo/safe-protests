@@ -7,7 +7,12 @@ const App = () => {
 
 	return (
 		<div>
-			<Routes loggedIn={loggedIn} setLogin={setLogin} users={users} />
+			<Routes
+				loggedIn={loggedIn}
+				setLogin={setLogin}
+				users={users}
+				setUser={setUser}
+			/>
 		</div>
 	);
 };

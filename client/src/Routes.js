@@ -11,7 +11,7 @@ import BrowseProtests from "./pages/BrowseProtests";
 import YourRights from "./pages/YourRights";
 import TermsOfService from "./pages/TermsOfService";
 
-const Routes = ({ loggedIn, setLogin, users }) => {
+const Routes = ({ loggedIn, setLogin, users, setUser }) => {
 	return (
 		<main>
 			<Switch>
@@ -21,7 +21,7 @@ const Routes = ({ loggedIn, setLogin, users }) => {
 					<Login />
 				</Route>
 				<Route path="/registration">
-					<UserRegistration users={users} />
+					<UserRegistration users={users} setUsers={setUser} />
 				</Route>
 				<PrivateRoute path="/about-safe-projects" loggedIn={loggedIn}>
 					<AboutSafeProjects />
