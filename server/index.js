@@ -11,13 +11,13 @@ app.post('/add_protest', function(req, res, next) {
     if (req.is('application/json')) {
         next();
     } else {
-        res.status(403).send('Forbidden');
+        res.status(403).send('Invalid request');
     }
 });
 
 app.post('/add_protest', function(req, res) {
     let success = false;
-    let resMsg = 'Forbidden';
+    let resMsg = 'Request body did not contain all needed information';
     let resCode = 403;
 
     let keys = Object.keys(req.body);
@@ -53,6 +53,29 @@ app.get('/get_protests', async (req, res) => {
         res.status(503).send({success: false, msg: 'Internal Server Error'});
     }
 });
+
+app.post('/join_protest', function (req, res, next) {
+    // check if input is JSON
+    if (req.is('application/json')) {
+        next();
+    } else {
+        res.status(403).send('Invalid request');
+    }
+});
+
+app.post('/join_protest', function (req, res) {
+    let keys = Object.keys(req.body);
+    if (JSON.stringify(keys) === JSON.stringify(['username', 'protestID'])) {
+        try {
+            database.addProtestUser(req.body.username, req.body.protestID);
+            res.status(200).send({success: true, msg: 'Success'});
+        } catch (err) {
+            res.status(503).send({ success: false, msg: 'Internal Server Error' });
+        }
+    } else {
+        res.status(403).send({success: false, msg: 'No name was given'});
+    }
+})
 
 app.listen(8000);
 
