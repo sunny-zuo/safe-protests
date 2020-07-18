@@ -27,7 +27,7 @@ async function insertProtest(obj) {
 async function getProtests(page = 0) {
     return new Promise((resolve, reject) => {
         const collection = db.collection("protests");
-        collection.find().project({protestors: 0}).skip(page).sort({ _id: -1 }).limit(10).toArray(function (err, res) {
+        collection.find().project().skip(page).sort({ _id: -1 }).limit(10).toArray(function (err, res) {
             if (err) reject(err);
             resolve(res);
         });
