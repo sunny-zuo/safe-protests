@@ -1,10 +1,10 @@
 import React from 'react';
-import home from './home';
  
-const yourRights = () => {
+const aboutSafeProtests= () => {
     return (
        <div>
-          <p>Your Rights</p>
+          <h1>About Safe Protest</h1>
+           <p>Lorem Ispus</p>
        </div>
     );
 }
