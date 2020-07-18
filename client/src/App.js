@@ -20,13 +20,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <div class="sidenav">
-        <a class="active" href="About Safe Protests">About</a>
-        <a href="#Browse Protests">Browse Protests</a>
-        <a href="#Your Rights">Your Rights</a>
-        <a href="#Settings">Settings</a>
-        <a href = "#Terms of Service">Terms of Service</a>
-      </div>
     </div>
     
   );
