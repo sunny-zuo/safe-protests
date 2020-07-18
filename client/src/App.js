@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Routes from "./Routes";
+import MainNav from "./pages/Navbar/MainNav";
 
 class App extends Component {
 	state = {
@@ -8,7 +9,7 @@ class App extends Component {
 	};
 
 	setUser = (user) => {
-		let user_pool = this.state.users.concat(user, ["bye"]);
+		let user_pool = this.state.users.concat(user);
 		this.setState({ users: user_pool }, () =>
 			console.log("UserPool: ", this.state.users)
 		);
@@ -22,6 +23,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
+				<MainNav loggedIn={this.state.loggedIn} />
 				<Routes
 					loggedIn={this.state.loggedIn}
 					setLogin={this.setLogin}

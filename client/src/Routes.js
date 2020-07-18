@@ -10,6 +10,7 @@ import AboutSafeProjects from "./pages/AboutSafeProjects";
 import BrowseProtests from "./pages/BrowseProtests";
 import YourRights from "./pages/YourRights";
 import TermsOfService from "./pages/TermsOfService";
+import GeneralTips from "./pages/GeneralTips";
 
 const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 	return (
@@ -23,7 +24,10 @@ const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 				<Route path="/registration">
 					<UserRegistration setUser={setUser} />
 				</Route>
-				<PrivateRoute path="/about-safe-projects" loggedIn={loggedIn}>
+				<PrivateRoute path="/general-tips" loggedIn={loggedIn}>
+					<GeneralTips />
+				</PrivateRoute>
+				<PrivateRoute path="/about-safe-protests" loggedIn={loggedIn}>
 					<AboutSafeProjects />
 				</PrivateRoute>
 				<PrivateRoute path="/browse-protests" loggedIn={loggedIn}>
