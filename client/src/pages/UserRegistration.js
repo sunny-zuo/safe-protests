@@ -10,7 +10,7 @@ class UserRegistration extends Component {
 			name: "",
 			email: "",
 			password: "",
-			confirmpasswordPassword: "",
+			confirmPassword: "",
 			nameError: "",
 			emailError: "",
 			passwordError: "",
@@ -59,10 +59,10 @@ class UserRegistration extends Component {
 			errorExists = 1;
 		}
 
-		if (!this.state.confirmpassword) {
+		if (!this.state.confirmPassword) {
 			confirmPasswordError = "This field cannot be blank";
 			errorExists = 1;
-		} else if (this.state.confirmpassword !== this.state.password) {
+		} else if (this.state.confirmPassword !== this.state.password) {
 			confirmPasswordError = "Passwords do not match";
 			errorExists = 1;
 		}
@@ -88,15 +88,10 @@ class UserRegistration extends Component {
 		if (valid) {
 			console.log("User " + this.state.name + " is signed up!\n");
 			this.updateState({ registered: true, error: "" });
-			this.props.setUser((prev) =>
-				prev.concat([
-					{
-						name: this.state.name,
-						email: this.state.email,
-						password: this.state.password,
-					},
-				])
-			);
+			this.props.setUser({
+				email: this.state.email,
+				password: this.state.password,
+			});
 		} else {
 			this.updateState({
 				error: "Error signing up. Please try again later",
@@ -156,19 +151,23 @@ class UserRegistration extends Component {
 						<p className="label"> Confirm Password </p>
 						<input
 							className="box-input"
-							type="password"
+							type="text"
 							name="password"
 							placeholder="Confirm Password"
-							value={this.state.confirmpasswordPassword}
+							value={this.state.confirmPassword}
 							onFocus={() => this.updateState({ confirmpasswordError: "" })}
 							onChange={(e) =>
 								this.updateState({
-									confirmpassword: e.target.value,
+									confirmPassword: e.target.value,
 								})
 							}
 						/>
 						<div className="error-box">{this.state.confirmPasswordError}</div>
+						<div className="btn-container">
+							<input className="btn login-btn" type="submit" value="Register" />
+						</div>
 						<div className="error-box">{this.state.error}</div>
+						<div className="btn-container">{this.props.users}</div>
 					</form>
 
 					<br />
