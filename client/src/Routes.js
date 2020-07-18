@@ -10,6 +10,7 @@ import AboutSafeProjects from "./pages/AboutSafeProjects";
 import BrowseProtests from "./pages/BrowseProtests";
 import YourRights from "./pages/YourRights";
 import TermsOfService from "./pages/TermsOfService";
+import AddProtest from "./pages/AddProtest";
 
 const Routes = ({ loggedIn, setLogin, users }) => {
 	return (
@@ -25,6 +26,9 @@ const Routes = ({ loggedIn, setLogin, users }) => {
 				</Route>
 				<PrivateRoute path="/about-safe-projects" loggedIn={loggedIn}>
 					<AboutSafeProjects />
+				</PrivateRoute>
+				<PrivateRoute path="/add-protest" loggedIn={loggedIn}>
+					<AddProtest />
 				</PrivateRoute>
 				<PrivateRoute path="/browse-protests" loggedIn={loggedIn}>
 					<BrowseProtests />
