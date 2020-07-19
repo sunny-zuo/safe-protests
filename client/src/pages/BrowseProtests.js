@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProtestCard from "../components/protestCard"
+import ProtestCard from "../components/protestCard";
 import "./css/Newsfeed.css";
 
 class BrowseProtests extends Component {
@@ -17,7 +17,7 @@ class BrowseProtests extends Component {
 	}
 
 	render() {
-		if (this.state.protestData == "") {
+		if (this.state.protestData === "") {
 			return null;
 		}
 		

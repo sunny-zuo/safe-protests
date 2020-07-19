@@ -1,15 +1,22 @@
 import React from "react";
+import "./../pages/css/ProtestCard.css"
 
 export default function ProtestCard(props) {
     return (
         <div className='protestCard'>
-            <h1>{props.name}</h1>
-            <h2>{props.time}</h2>
-            <h2>{props.location}</h2>
-            <h2>{props.description}</h2>
-            <h3>Organizer: {props.organizer}</h3>
-            <h4>Signed up: {props.protestorCount}</h4>
-            <h4>Status: ${props.status}</h4>
+            <h1 className="cardtitle">{props.name}</h1>
+
+            <div className="dateloc-container">
+                <h2>Date: {props.time}</h2>
+                <h2>Location: {props.location}</h2>
+            </div>
+
+            <div class="card-subinfo">
+                <h4>{props.description}</h4>
+                <h3>Organizers: {props.organizer}</h3>
+                <h3>Signed up: {props.protestorCount}</h3>
+                <h3>Status: ${props.status}</h3>
+            </div>
         </div>
     )
 }
