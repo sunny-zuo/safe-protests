@@ -68,8 +68,10 @@ app.get('/get_protest', async (req, res) => {
         } catch (err) {
             res.status(503).send({ success: false, msg: 'Internal Server Error' });
         }
+    } else {
+        res.status(403).send('Request body did not contain all needed information');
     }
-})
+});
 
 app.post('/join_protest', function (req, res, next) {
     // check if input is JSON
@@ -84,13 +86,33 @@ app.post('/join_protest', function (req, res) {
     let json = req.body;
     if (json.protestID && json.username) {
         try {
-            database.addProtestUser(json.username, json.protestID);
+            database.addProtestUser(json.protestID, json.username);
             res.status(200).send({success: true, msg: 'Success'});
         } catch (err) {
             res.status(503).send({ success: false, msg: 'Internal Server Error' });
         }
     } else {
-        res.status(403).send({success: false, msg: 'No name was given'});
+        res.status(403).send('No name was given');
+    }
+});
+
+app.post('/add_post', function (req, res, next) {
+    // check if input is JSON
+    if (req.is('application/json')) {
+        next();
+    } else {
+        res.status(403).send('Invalid request');
+    }
+});
+
+app.post('/add_post', function (req, res) {
+    let json = req.body;
+    if (json.protestID && json.username && json.title && json.body) {
+        const image = (json.image) ? json.image : null;
+        database.addPost(json.protestID, json.username, json.title, json.body, Date.now(), image);
+        res.status(200).send({ success: true, msg: 'Success' });
+    } else {
+        res.status(403).send('Request body did not contain all needed information');
     }
 })
 

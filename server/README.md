@@ -100,3 +100,24 @@ Sample response:
   "msg": "Success"
 }
 ```
+
+## /add_post (POST)
+
+Add a post to an existing protest, by _id. Takes a JSON input (and an optional image, which is currently unsupported):
+
+```json
+{
+	"protestID": "5f1374b13e9095a9f0a88131",
+	"username": "Sunny",
+	"title": "Hello World",
+	"body": "test post #1"
+}
+```
+
+Sample response:
+```json
+{
+  "success": true,
+  "msg": "Success"
+}
+```
