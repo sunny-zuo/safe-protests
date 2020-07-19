@@ -36,9 +36,9 @@ class ViewProtest extends Component {
         return (
             <div className="protest-view">
                 <div className="protest-info">
-                    <h1 className="title">{data.name}</h1>
+                    <h1 className="title" style={{fontSize: "60px"}}>{data.name}</h1>
                     <h2>{data.organizer}</h2>
-                    <h2>{data.time} at {data.location}</h2>
+                    <h2>{data.date} at {data.location}</h2>
                     <h3>{data.description}</h3>
                     <div className="mapImage">
                         <p>eventually there will be an image of the map here and this is a placeholder</p>

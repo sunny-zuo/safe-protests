@@ -13,9 +13,6 @@ const MainNav = ({ loggedIn, logOut }) => {
 			{loggedIn ? (
 
 				<Navbar logOut={logOut}>
-					<Link to="/about-safe-protests">
-						<div class="sidebar-text">About Safe Protests</div>
-					</Link>
 					<Link to="/general-tips">
 						<div class="sidebar-text">Protest Tips and Advice</div>
 					</Link>
