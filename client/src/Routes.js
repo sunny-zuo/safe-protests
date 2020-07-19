@@ -42,12 +42,13 @@ const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 				</PrivateRoute>
 				<PrivateRoute path="/add-protest" loggedIn={loggedIn}>
 					<AddProtest />
+					</PrivateRoute>
 				<PrivateRoute path="/make-new-post" loggedIn={loggedIn}>
 					<MakeNewPost />
 				</PrivateRoute>
 			</Switch>
-		</main>
+			</main>
 	);
-};
+	};
 
 export default Routes;
