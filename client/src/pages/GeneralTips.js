@@ -2,15 +2,21 @@ import React from "react";
 
 const GeneralTips = () => {
 	return (
+		
 		<div>
+			<head>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+			</head>
 			<h1 className="title">Ensuring Your Safety During a Protest</h1>
+
 			<p className="text" style={{textAlign: "left"}}>
 			<p>
 				Here are some general tips on how to protest safely, courtesy of Amnesty
 				International. Please take the time to familiarize yourself with these before each protest.
 			</p>
 			<h2>
-				<b>What To Do:</b>
+				<b>What To Do: </b>
+				<i class="material-icons large" >thumb_up</i>
 			</h2>
 			<ul>
 				<li>
@@ -32,7 +38,8 @@ const GeneralTips = () => {
 				</li>
 			</ul>
 			<h2>
-				<b>What Not To Do</b>
+				<b>What Not To Do: </b>
+				<i class="material-icons large" >thumb_down</i>
 			</h2>
 			<ul>
 				<li>
@@ -54,7 +61,8 @@ const GeneralTips = () => {
 				<li><b>Don't</b> forget to eat food and drink lots of water</li>
 			</ul>
 			<h2>
-				<b>What To Bring</b>
+				<b>What To Bring: </b>
+				<i class="material-icons large" >local_atm</i>
 			</h2>
 			<ul>
 				<li>
@@ -76,7 +84,8 @@ const GeneralTips = () => {
 				<li>Wet wipes and tissue</li>
 			</ul>
 			<h2>
-				<b>Dealing With Teargas</b>
+				<b>Dealing With Teargas: </b>
+				<i class="material-icons large" >fire_extinguisher</i>
 			</h2>
 			<ul>
 				<li>
@@ -107,7 +116,8 @@ const GeneralTips = () => {
 				</li>
 			</ul>
 			<h2>
-				<b>What To Wear</b>
+				<b>What To Wear: </b>
+				<i class="material-icons large" >umbrella</i>
 			</h2>
 			<ul>
 				<li>Shatter resistant swimming goggles and a N95 facemask</li>
