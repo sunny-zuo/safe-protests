@@ -4,8 +4,8 @@ import "./pages/css/Toolbar.css";
 class Text extends Component {
 	state = {
 		text: {
-			recipient: "6475309552",
-			textmessage: "I need help, please",
+			recipient: "5878901255",
+			textmessage: "test message",
 		},
 	};
 
