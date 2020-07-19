@@ -5,11 +5,15 @@ import "./css/YourRights.css";
 import flagcan from "./img/flag-can.png";
 import flaguk from "./img/flag-uk.png";
 import flagus from "./img/flag-us.png";
-
 const YourRights = () => {
 	return (
 		<div className="body">
-			<h1 className="title">Your Rights During a Protest</h1>
+			<head>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+			<script src="https://kit.fontawesome.com/8c19c7df11.js" crossorigin="anonymous"></script>
+			</head>
+			<h1 className="title">Your Rights During a Protest </h1>
+			<i class="material-icons md-48" >gavel</i>
 			<div className="text">
 				<p><b>Protesting has inherent risks.</b> Knowing your human rights is a crucial part to having a safe and successful protest.</p>
 				<p>Please take the time to familiarize yourself with the protester rights in your country so that you are capable of navigating difficult and/or potentially dangerous situations.</p>
