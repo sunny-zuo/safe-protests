@@ -13,7 +13,7 @@ class Text extends Component {
 		const { text } = this.state;
 		//pass variables within query string
 		fetch(
-			`http://localhost:8000/send-text?recipient=${text.recipient}&textmessage=${text.textmessage}`
+			`http://localhost:8000/send_text?recipient=${text.recipient}&textmessage=${text.textmessage}`
 		).catch((err) => console.log(err));
 	};
 

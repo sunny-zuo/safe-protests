@@ -14,7 +14,7 @@ const authToken = process.env.AUTH_TOKEN;
 const client = new twilio(accountSid, authToken);
 
 //Twilio Text
-app.get("/send-text", (req, res) => {
+app.get("/send_text", (req, res) => {
 	//Get Variables, passed via query string
 	const { recipient, textmessage } = req.query;
 	//Send Text
@@ -24,7 +24,12 @@ app.get("/send-text", (req, res) => {
 			to: "+1" + recipient,
 			from: "+16173907855",
 		})
-		.then((message) => console.log(message.body));
+		.then((message) => console.log(message.body))
+		.then(res.status(200).send({ success: true }))
+		.catch(err => {
+			console.error(err);
+			res.status(503).send({ success: false, msg: "Internal Server Error" });
+		});
 });
 
 // Endpoint for adding a new protest to the database
