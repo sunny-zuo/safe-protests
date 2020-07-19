@@ -7,16 +7,19 @@ const Main = () => {
 	return (
 		<div className="body">
 			<div className="title-container">
-				<img class=".img" src={safeprotest}></img>
+				<img class="img" src={safeprotest}></img>
 			</div>
 			<p className="text">
 				Keeping people safe during protests with live updates and info
 			</p>
-			<a className="btn" href="#">SIGN IN</a>
-			<div className="or-container">
-				<img class=".img" src={or}></img>
+
+			<div className="btn-container">
+				<a className="btn" href="#">SIGN IN</a>
+				<div className="or-container">
+					<img class="img" src={or}></img>
+				</div>
+				<a className="btn" href="#">REGISTER</a>
 			</div>
-			<a className="btn" href="#">REGISTER</a>
 		</div>
 	);
 };
