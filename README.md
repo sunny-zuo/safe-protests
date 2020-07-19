@@ -39,3 +39,9 @@ Next steps for Safe Protests:
 5. In the "client" directory, run `npm start` to initate the React development server
 6. In the "server" directory, run `node index.js` to startup the express server
 7. You're all done!
+
+This project was made between July 18-20, 2020 for the SetHacks
+
+Team members:
+
+Carol Xu, Rahul Aggarwal, Sunny Zuo, Umar Yousafzai
