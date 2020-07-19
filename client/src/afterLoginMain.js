@@ -5,8 +5,8 @@ import database from "../../server/database.js"
 
 const afterLoginMain = () => {
     return (
-		<div className="body">
-			<div className="title-container">
+		<div id = "root">
+			<div>
 				<img src={safeprotest}></img>
                 <script src = "feed.js"></script>
 			</div>
