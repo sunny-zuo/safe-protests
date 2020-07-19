@@ -1,12 +1,10 @@
 import React from "react";
-import home from "./home";
 
 const GeneralTips = () => {
 	return (
 		<div>
-			<h1>
-				<b>Ensuring Your Safety During a Protest</b>
-			</h1>
+			<h1 className="title">Ensuring Your Safety During a Protest</h1>
+			<p className="text" style={{textAlign: "left"}}>
 			<p>
 				Here are some general tips on how to protest safetly courtesy of Amnesty
 				International.
@@ -132,6 +130,7 @@ const GeneralTips = () => {
 				</li>
 				<li>A hat to protect you from the sun and from chemical weapons</li>
 			</ul>
+			</p>
 		</div>
 	);
 };
