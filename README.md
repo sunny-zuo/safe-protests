@@ -28,6 +28,7 @@ We learned how to effectively setup MongoDB, use twilio API, use Express & Node.
 Next steps for Safe Protests: 
 * Deploy our web app to Android and iOS. 
 * Expand the number of features available in the app. 
+* Utilize the web platform to its full potential - allow the organization of online, global-scale protests.
 
 ## How to run the application
 
