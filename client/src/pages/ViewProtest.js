@@ -36,7 +36,7 @@ class ViewProtest extends Component {
         return (
             <div className="protest-view">
                 <div className="protest-info">
-                    <h1>{data.name}</h1>
+                    <h1 className="title">{data.name}</h1>
                     <h2>{data.organizer}</h2>
                     <h2>{data.date} at {data.location}</h2>
                     <h3>{data.description}</h3>
