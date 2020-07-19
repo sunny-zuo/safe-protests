@@ -64,17 +64,35 @@ Sample response:
 
 ```json
 {
-  "_id": "5f137aa124ca6dae50c13b06",
-  "name": "yeet",
-  "time": "1990-06-20",
-  "description": "789",
-  "organizer": "456",
-  "location": "123",
+  "_id": "5f13a19f7e4a63bc08ee37a4",
+  "name": "Colonize Mars Meeting",
+  "time": "2052-07-29",
+  "description": "Demonstration to support colonizing mars",
+  "organizer": "Not a Martian",
+  "location": "Earth",
   "status": "active",
   "protestors": [
-    "456"
+    "Not a Martian",
+    "NotAnAilen",
+    "FlatEarther"
   ],
-  "protestorCount": 1,
+  "posts": [
+    {
+      "username": "Not a Martian",
+      "title": "Protest created",
+      "body": "Added undefined to Safe Protests!",
+      "date": 1595122079055,
+      "image": null
+    },
+    {
+      "username": "NotAnAilen",
+      "title": "Ailen attacks",
+      "body": "I heard rumors of potential Ailen attacks. Be careful!",
+      "date": 1595122128738,
+      "image": null
+    }
+  ],
+  "protestorCount": 3,
   "success": true
 }
 ```
@@ -94,6 +112,27 @@ Sample input:
 
 Sample response:
 
+```json
+{
+  "success": true,
+  "msg": "Success"
+}
+```
+
+## /add_post (POST)
+
+Add a post to an existing protest, by _id. Takes a JSON input (and an optional image, which is currently unsupported):
+
+```json
+{
+	"protestID": "5f1374b13e9095a9f0a88131",
+	"username": "Sunny",
+	"title": "Hello World",
+	"body": "test post #1"
+}
+```
+
+Sample response:
 ```json
 {
   "success": true,
