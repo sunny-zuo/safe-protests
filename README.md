@@ -10,24 +10,24 @@ Video Demo:
 We were inspired by the recent BLM protests around the world after the death of George Floyd at the hand of a police officer. We wanted to create a web app that was able to help citizens safely practice their right to free speech and protest. 
 
 ## What does your product do?
-Our product is a web app that helps citizens safely organize and participate in protests. Users can submit information about a new protest to alert the rest of the users or view details on a protest happening near them. The web app also provides resources to aid a user during a protest. They can mark locations with heavy police presence or the use of force to alert other users. The app provides a page with information pertaining to users' legal rights during protest for three different countries. Finally, the app also provides a list of common tips so that the user can protest safely.
+SafteyProtest is a web application that helps citizens safely organize and participate in protests. Users can submit information about a new protest to alert the rest of the users or view details on a protest happening near them. The web app also provides resources to aid a user during a protest. They can mark locations with heavy police presence or the use of force to alert other users. The app provides a page with information pertaining to users' legal rights during protest for three different countries. Finally, the app also provides a list of common tips so that the user can protest safely.
 
 ## How did you build your product?
-We built our product using the MERN stack (MongoDB, Express, React and Node.js), with React for the frontend and MongoDB, Express and Node for the backend.
+We built our product using the MERN stack (MongoDB, Express, React and Node.js), with React for the frontend and MongoDB, Express and Node for the backend. We also used serveral npm packages and API's including Twilio's API. 
 
 ## What challenges did you run into?
-We initially wanted to create a mobile app using Android Studio, Kotlin and Flutter. However, some of our group members had trouble setting up Google Flutter on MacOS. Therefore, we decided to instead create a web app using React.
+We initially wanted to create a mobile app using Android Studio, Kotlin and Flutter. However, some of our group members had trouble setting up Google Flutter on MacOS. Similarily, when transitioning to React Native we were unable to connect to our android simulator, thus we decided to leverage our knowledge of MERN and create a fullstack web application. 
 
 ## Are there any accomplishments you are proud of?
-We're proud of our REST API server, which efficiently inserts and retrieves data from MongoDB to run all of the processes for the app. We're also proud of our integration with Twilio to send text messages as part of our "Emergency Button" feature, which sends a protester's chosen contact a message if the protester is injured, being detained etc.
+We're proud of our REST API server, which efficiently inserts and retrieves data from MongoDB to run all of the processes for the app. We're also proud of our integration with Twilio to send text messages as part of our "Emergency Button" feature, which sends a protester's chosen contact a message if the protester is injured, being detained etc. Furthermore, we are proud of the fact that we built our application's user interface from scratch, we didn't use any templates, styling packages or dependencies to design our project. 
 
 ## What did you learn through this process?
-We learned how to effectively setup MongoDB, use twilio API, use Express & Node.js, etc.
+We learned how to effectively setup MongoDB, use twilio API, create an Express server, route in React.
 
 ## What's next for your product?
 Next steps for Safe Protests: 
 * Deploy our web app to Android and iOS. 
-* Expand the number of features available in the app. 
+* Expand the features available in the app (automated alerts in the case of police violence during rally's. 
 * Utilize the web platform to its full potential - allow the organization of online, global-scale protests.
 
 ## How to run the application
