@@ -64,15 +64,23 @@ Sample response:
 
 ```json
 {
-  "_id": "5f137aa124ca6dae50c13b06",
+  "_id": "5f138ef477c747c960d6e6f1",
   "name": "yeet",
-  "time": "1990-06-20",
-  "description": "789",
-  "organizer": "456",
-  "location": "123",
+  "time": "2020-07-18",
+  "description": "desc",
+  "organizer": "bob",
+  "location": "Canada",
   "status": "active",
   "protestors": [
-    "456"
+    "bob"
+  ],
+  "posts": [
+    {
+      "username": "Sunny",
+      "title": "Hello World",
+      "body": "test post #1",
+      "image": null
+    }
   ],
   "protestorCount": 1,
   "success": true
