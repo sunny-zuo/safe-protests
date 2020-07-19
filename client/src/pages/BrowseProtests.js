@@ -17,7 +17,7 @@ class BrowseProtests extends Component {
 	}
 
 	render() {
-		if (this.state.protestData == "") {
+		if (this.state.protestData === "") {
 			return null;
 		}
 		
