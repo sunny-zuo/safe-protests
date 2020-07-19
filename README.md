@@ -29,10 +29,10 @@ Next steps for Safe Protests:
 
 ## How to run the application
 
-1. Run `git clone` into your command line
-2. Cd into the project directory
-3. Open up two command lines, `cd client` in one and `cd sever` in the other
-4. In each command line execute the command `npm i` (ensure that you are in the correct directories for this step)
+1. Run `git clone` in your command line
+2. `cd` into the project directory
+3. Open up two command lines, type `cd client` in one and `cd sever` in the other
+4. In each command line execute the command `npm i` to install all the required dependencies and packages
 5. In the "client" directory, run `npm start` to initate the React development server
 6. In the "server" directory, run `node index.js` to startup the express server
 7. You're all done!
