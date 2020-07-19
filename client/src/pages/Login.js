@@ -75,7 +75,7 @@ class Login extends Component {
 
 	render() {
 		if (this.props.loggedIn) {
-			return <Redirect to="/" />;
+			return <Redirect to="/browse-protests" />;
 		} else {
 			return (
 				<div className="box">

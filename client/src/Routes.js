@@ -51,8 +51,8 @@ const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 					<MakeNewPost />
 				</PrivateRoute>
 			</Switch>
-			</main>
+		</main>
 	);
-	};
+};
 
 export default Routes;
