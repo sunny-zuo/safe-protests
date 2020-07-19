@@ -1,0 +1,31 @@
+.sidedrawer {
+	height: 100%;
+	background: white;
+	box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5); /* adds shadow to the left of drawer */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 70%;
+	max-width: 400px;
+	z-index: 200;
+	transform: translateX(-100%); /*where it starts out when closed */
+	transition: transform 0.3s ease-out;
+	text-align: center;
+}
+
+.sidedrawer.open {
+	transform: translateX(0); /* where sidebar should be when it's open */
+}
+.sidedrawer div.container {
+	height: 100%;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sidedrawer div.sidedrawer_items {
+	list-style: none;
+	margin-bottom: 40px;
+	font-size: 30px;
+}

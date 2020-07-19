@@ -10,21 +10,25 @@ import AboutSafeProjects from "./pages/AboutSafeProjects";
 import BrowseProtests from "./pages/BrowseProtests";
 import YourRights from "./pages/YourRights";
 import TermsOfService from "./pages/TermsOfService";
+import AddProtest from "./pages/AddProtest";
 
-const Routes = ({ loggedIn, setLogin, users, setUser }) => {
+const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 	return (
 		<main>
 			<Switch>
 				{/* Default Page */}
 				<Route exact path="/" component={Main} />
 				<Route path="/login">
-					<Login />
+					<Login users={users} loggedIn={loggedIn} setLogin={setLogin} />
 				</Route>
 				<Route path="/registration">
-					<UserRegistration users={users} setUsers={setUser} />
+					<UserRegistration setUser={setUser} />
 				</Route>
-				<PrivateRoute path="/about-safe-projects" loggedIn={loggedIn}>
+				<PrivateRoute path="/about-safe-protests" loggedIn={loggedIn}>
 					<AboutSafeProjects />
+				</PrivateRoute>
+				<PrivateRoute path="/add-protest" loggedIn={loggedIn}>
+					<AddProtest />
 				</PrivateRoute>
 				<PrivateRoute path="/browse-protests" loggedIn={loggedIn}>
 					<BrowseProtests />
