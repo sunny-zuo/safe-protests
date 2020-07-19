@@ -51,13 +51,12 @@ class MakeNewPost extends Component {
 				<div className="text">
 					<h1 className="title">
 						Post an Update
-				</h1>
+					</h1>
 
 					<input type="text" id="post-title" className="input-field" name="post-title" placeholder="Title Your Post (optional)" value={this.state.title} onChange={(e) => this.updateState({ title: e.target.value })}></input>
-					<input type="text" id="post-username" className="input-field" name="post-username" placeholder="Name" value={this.state.username} onChange={(e) => this.updateState({ username: e.target.value })}></input>
-					<input type="textarea" rows="10" style={{ height: "200px" }} id="post-cont" className="input-field" name="post-cont" placeholder="Post Content (required)" value={this.state.body} onChange={(e) => this.updateState({ body: e.target.value })}></input>
+					<input type="text" id="post-username" style={{marginTop: "20px"}} className="input-field" name="post-username" placeholder="Name" value={this.state.username} onChange={(e) => this.updateState({ username: e.target.value })}></input>
+					<textarea type="text" rows="10" style={{ height: "200px", fontSize: "15px", marginTop: "20px" }} id="post-cont" className="input-field" name="post-cont" placeholder="Post Content (required)" value={this.state.body} onChange={(e) => this.updateState({ body: e.target.value })}></textarea>
 
-					
 					<button className="main-btn" onClick={this.addPost}>Make Post</button>
 				</div>
 			</div>
