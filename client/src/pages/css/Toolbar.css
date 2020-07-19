@@ -5,6 +5,7 @@
 	width: 100%;
 	background-color: #88f0ea;
 	height: 80px;
+	z-index: 999;
 }
 
 .toolbar_togglebutton {

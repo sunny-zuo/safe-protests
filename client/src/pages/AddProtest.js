@@ -13,6 +13,7 @@ class AddProtest extends Component {
 			startDate: date,
 		});
 	};
+
 	render() {
 		return (
 			<div className="body" style={{ textAlign: "left" }}>

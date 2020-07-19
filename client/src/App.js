@@ -4,7 +4,7 @@ import MainNav from "./pages/Navbar/MainNav";
 
 class App extends Component {
 	state = {
-		loggedIn: true,
+		loggedIn: false,
 		users: [],
 	};
 

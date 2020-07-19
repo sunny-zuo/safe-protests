@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
+import "./css/form.scss";
 
 class UserRegistration extends Component {
 	constructor(props) {
@@ -111,7 +112,7 @@ class UserRegistration extends Component {
 						{/* Name Input */}
 						<p className="label"> Name </p>
 						<input
-							className="box-input"
+							className={this.state.nameError ? "box-input error" : "box-input"}
 							type="text"
 							name="name"
 							value={this.state.name}
@@ -119,12 +120,14 @@ class UserRegistration extends Component {
 							onFocus={() => this.updateState({ nameError: "" })}
 							onChange={(e) => this.updateState({ name: e.target.value })}
 						/>
-						<div className="error-box">{this.state.nameError}</div>
+						<div id="error-box">{this.state.nameError}</div>
 
 						{/* Email Input */}
 						<p className="label"> Email </p>
 						<input
-							className="box-input"
+							className={
+								this.state.emailError ? "box-input error" : "box-input"
+							}
 							type="text"
 							name="email"
 							placeholder="user@example.com"
@@ -132,12 +135,14 @@ class UserRegistration extends Component {
 							onFocus={() => this.updateState({ emailError: "" })}
 							onChange={(e) => this.updateState({ email: e.target.value })}
 						/>
-						<div className="error-box">{this.state.emailError}</div>
+						<div id="error-box">{this.state.emailError}</div>
 
 						{/* Password Input */}
 						<p className="label"> Password </p>
 						<input
-							className="box-input"
+							className={
+								this.state.passwordError ? "box-input error" : "box-input"
+							}
 							type="text"
 							name="password"
 							value={this.state.password}
@@ -145,12 +150,16 @@ class UserRegistration extends Component {
 							onFocus={() => this.updateState({ passwordError: "" })}
 							onChange={(e) => this.updateState({ password: e.target.value })}
 						/>
-						<div className="error-box">{this.state.passwordError}</div>
+						<div id="error-box">{this.state.passwordError}</div>
 
 						{/* Confirm Password Input */}
 						<p className="label"> Confirm Password </p>
 						<input
-							className="box-input"
+							className={
+								this.state.confirmPasswordError
+									? "box-input error"
+									: "box-input"
+							}
 							type="text"
 							name="password"
 							placeholder="Confirm Password"
@@ -162,11 +171,11 @@ class UserRegistration extends Component {
 								})
 							}
 						/>
-						<div className="error-box">{this.state.confirmPasswordError}</div>
+						<div id="error-box">{this.state.confirmPasswordError}</div>
 						<div className="btn-container">
 							<input className="btn login-btn" type="submit" value="Register" />
 						</div>
-						<div className="error-box">{this.state.error}</div>
+						<div id="error-box">{this.state.error}</div>
 						<div className="btn-container">{this.props.users}</div>
 					</form>
 
