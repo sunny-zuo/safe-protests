@@ -4,7 +4,6 @@ From the womens' suffrage movement to Martin Luther King Jr.'s rallies, citizens
 
 We are addressing the "Community" category (SDGs: 16 and 17) and the "The Environment" category (SDG: 13).
 
-
 ## What inspired you to make this product?
 We were inspired by the recent BLM protests around the world after the death of George Floyd at the hand of a police officer. We wanted to create a web app that was able to help citizens safely practice their right to free speech and protest. 
 
@@ -27,3 +26,13 @@ We learned how to effectively setup Mongo for a database.
 Next steps for Safe Protests: 
 * Deploy our web app to Android and iOS. 
 * Expand the number of features available in the app. 
+
+## How to run the application
+
+1. Run `git clone` into your command line
+2. Cd into the project directory
+3. Open up two command lines, `cd client` in one and `cd sever` in the other
+4. In each command line execute the command `npm i` (ensure that you are in the correct directories for this step)
+5. In the "client" directory, run `npm start` to initate the React development server
+6. In the "server" directory, run `node index.js` to startup the express server
+7. You're all done!
