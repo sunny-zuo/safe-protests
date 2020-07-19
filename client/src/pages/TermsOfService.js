@@ -2,11 +2,11 @@ import React from "react";
 
 const TermsOfService = () => {
 	return (
-		<div>
-			<p>
+		<div className="body">
+			<p className="text">
 				{" "}
-				<b>Terms of Service</b>
-			</p>
+				<h1 className="title">Terms of Service</h1>
+			
 			<p>Welcome to Safe Protests!</p>
 			<p>
 				These terms and conditions outline the rules and regulations for the use
@@ -189,6 +189,7 @@ const TermsOfService = () => {
 				As long as the website and the information and services on the website
 				are provided free of charge, we will not be liable for any loss or
 				damage of any nature.
+			</p>
 			</p>
 		</div>
 	);
