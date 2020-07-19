@@ -12,26 +12,36 @@
 
 h1.cardtitle {
 	font-size: 40px;
+	padding: 20px;
+	margin: 0 auto;
+	width: 50%;
+	padding: 15px;
+	line-height: 60px;
+	color: #000b3d;
 }
 
-div h2 {
+div.header-container {
+	background-color: rgb(189, 186, 186);
+	width: 50%;
+	margin: auto;
+	border-radius: 9px;
+}
+
+div.dateloc-container h2 {
 	font-size: 20px;
 	color: black;
 	margin-right: 60px;
 }
 
-h3,
+h3.edit,
 h4 {
 	margin-left: 260px;
+	color: black;
 }
 
-.cardtitle {
-	margin: 0 auto;
-	font-size: 60px;
-	width: 50%;
-	padding: 15px;
-	line-height: 60px;
-	color: #000b3d;
+h3.special {
+	margin-left: 260px;
+	color: red;
 }
 
 .cardtitle-container {
