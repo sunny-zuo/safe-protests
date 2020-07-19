@@ -16,11 +16,18 @@ mongoClient.connect((err, client) => {
 
 async function insertProtest(obj) {
     let data = obj;
+    data.status = "active";
     data.protestors = [data.organizer];
+    data.posts = [{
+        username: data.organizer,
+        title: 'Protest created',
+        body: `Added ${data.title} to Safe Protests!`,
+        date: Date.now(),
+        image: null
+    }]
     const collection = db.collection("protests");
     collection.insertOne(data, function (err, res) {
         if (err) throw err;
-        console.log(`${JSON.stringify(data)} inserted`);
     });   
 }
 

@@ -22,8 +22,6 @@ app.post('/add_protest', function(req, res) {
 
     let json = req.body;
     if (json.name && json.time && json.description && json.organizer && json.location) {
-        req.body.status = 'active';
-        console.log(req.body);
         try {
             database.insertProtest(req.body);
             success = true;
