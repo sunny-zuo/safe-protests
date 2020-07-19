@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 const twilio = require("twilio");
 
+// Set up CORS (no params enables all cors requests) and JSON handling middleware
 app.use(cors());
 app.use(express.json());
 
@@ -11,15 +12,6 @@ app.use(express.json());
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
 const client = new twilio(accountSid, authToken);
-
-app.post("/add_protest", function (req, res, next) {
-	// check if input is JSON
-	if (req.is("application/json")) {
-		next();
-	} else {
-		res.status(403).send("Invalid request");
-	}
-});
 
 //Twilio Text
 app.get("/send-text", (req, res) => {
@@ -35,12 +27,22 @@ app.get("/send-text", (req, res) => {
 		.then((message) => console.log(message.body));
 });
 
+// Endpoint for adding a new protest to the database
+app.post("/add_protest", function (req, res, next) {
+	// check if input is JSON
+	if (req.is("application/json")) {
+		next();
+	} else {
+		res.status(403).send("Invalid request");
+	}
+});
 app.post("/add_protest", function (req, res) {
 	let success = false;
 	let resMsg = "Request body did not contain all needed information";
 	let resCode = 403;
 
 	let json = req.body;
+	// requires a json input with the name, time, description, organizer and location keys
 	if (
 		json.name &&
 		json.time &&
@@ -64,17 +66,20 @@ app.post("/add_protest", function (req, res) {
 	res.status(resCode).send({ success: success, msg: resMsg });
 });
 
+// Endpoint for getting a list of protests. A query string for page can be given to see other pages (each page has 10 protests)
 app.get("/get_protests", async (req, res) => {
 	let skip = 0;
+	// Set the number of documents to skip in the db request for pagination if it exists
 	if (req.query.page) {
 		skip = req.query.page * 10 - 10; // each page contains 10 protests and thus will skip 10 more per page
 	}
 
 	try {
 		let data = await database.getProtests(skip);
+		// Count the number of protestors to add a protestorCount field to the response
 		for (let i = 0; i < Object.keys(data).length; i++) {
 			data[i].protestorCount = Object.keys(data[i].protestors).length;
-			delete data[i].protestors;
+			delete data[i].protestors; // delete the list of names as it won't be needed in this response
 		}
 		res.status(200).send({ data: data, success: true });
 	} catch (err) {
@@ -82,6 +87,7 @@ app.get("/get_protests", async (req, res) => {
 	}
 });
 
+// Endpoint for getting the full information about a specific protest, by the protestID paramter in the query string (_id)
 app.get("/get_protest", async (req, res) => {
 	if (req.query.protestID) {
 		try {
@@ -97,6 +103,7 @@ app.get("/get_protest", async (req, res) => {
 	}
 });
 
+// Endpoint for joining a protest. Requires JSON input with the protestID (_id) and username keys
 app.post("/join_protest", function (req, res, next) {
 	// check if input is JSON
 	if (req.is("application/json")) {
@@ -105,7 +112,6 @@ app.post("/join_protest", function (req, res, next) {
 		res.status(403).send("Invalid request");
 	}
 });
-
 app.post("/join_protest", function (req, res) {
 	let json = req.body;
 	if (json.protestID && json.username) {
@@ -120,6 +126,7 @@ app.post("/join_protest", function (req, res) {
 	}
 });
 
+// Endpoint for adding a new post to a protest. Requires JSON input with the protestID, username, title and body keys
 app.post("/add_post", function (req, res, next) {
 	// check if input is JSON
 	if (req.is("application/json")) {
@@ -128,11 +135,11 @@ app.post("/add_post", function (req, res, next) {
 		res.status(403).send("Invalid request");
 	}
 });
-
 app.post("/add_post", function (req, res) {
 	let json = req.body;
 	if (json.protestID && json.username && json.title && json.body) {
-		const image = json.image ? json.image : null;
+		const image = json.image ? json.image : null; // if no image is given, make it null
+		// Add post using the given paramters. Also includes a date field based on the current server timestamp
 		database.addPost(
 			json.protestID,
 			json.username,
@@ -148,5 +155,4 @@ app.post("/add_post", function (req, res) {
 });
 
 app.listen(8000);
-
 console.log("Server listening on port 8000");
