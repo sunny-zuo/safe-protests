@@ -5,7 +5,7 @@ class Text extends Component {
 	state = {
 		text: {
 			recipient: "5878901255",
-			textmessage: "test message",
+			textmessage: "Alert from Protest Safe: Sunny has activated the emergency alert to notify you that he is being taken into custody",
 		},
 	};
 
