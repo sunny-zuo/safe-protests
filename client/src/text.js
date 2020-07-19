@@ -20,7 +20,7 @@ class Text extends Component {
 	render() {
 		return (
 			<div class="send-text">
-				<button class="txting-btn" onClick={this.sendText}> Send Text </button>
+				<button class="txting-btn" onClick={this.sendText}> HELP </button>
 			</div>
 		);
 	}
