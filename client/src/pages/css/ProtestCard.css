@@ -1,0 +1,38 @@
+.protestCard {
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 20px auto;
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+.cardtitle {
+    margin: 0 auto;
+    font-size: 60px;
+    width: 50%;
+    padding: 15px;
+    line-height: 60px;
+}
+
+.cardtitle-container {
+    min-height: 120px;
+    justify-content: center;
+}
+
+.dateloc-container {
+    margin: auto;
+    width: 45%;
+    text-align: left;
+    float: right;
+}
+
+.card-subinfo {
+    color: grey;
+    width: 50%;
+    text-align: left;
+}
+

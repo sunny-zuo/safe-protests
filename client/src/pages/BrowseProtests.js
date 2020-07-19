@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProtestCard from "../components/protestCard"
+import ProtestCard from "../components/protestCard";
 import "./css/Newsfeed.css";
 
 class BrowseProtests extends Component {
