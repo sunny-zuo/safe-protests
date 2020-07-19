@@ -3,9 +3,10 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: white;
+	background-color: #88f0ea;
 	height: 80px;
 }
+
 .toolbar_togglebutton {
 	position: fixed;
 	right: 0;
