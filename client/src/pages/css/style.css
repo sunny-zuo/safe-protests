@@ -1,0 +1,43 @@
+.body {
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+    padding: 15px;
+}
+
+.text {
+    margin: 0;
+    width: 80%;
+    display:inline-block;
+}
+
+p {
+    font-size: 20px;
+}
+ul {
+    list-style-position: inside;
+    text-align: left;
+    display:inline-block;
+    font-size: 20px;
+}
+#listContainer {
+    /* make element inline flex-container */
+    /* this will make its children flex-items */
+    display: inline-flex;
+    /* align-items items in column */   
+    flex-direction: column;
+    /* center items horizontally */
+    align-items: center;
+    /* center items vertically */
+    justify-content: center;
+    text-align: left;
+    width: 700px;
+    height: 400px;
+    margin-left: 600px;
+    justify-content: center;
+  }
+  #textContainer{
+      text-align: center
+  }
