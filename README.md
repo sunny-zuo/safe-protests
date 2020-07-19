@@ -9,7 +9,7 @@ Video Demo:
 We were inspired by the recent BLM protests around the world after the death of George Floyd at the hand of a police officer. We wanted to create a web app that was able to help citizens safely practice their right to free speech and protest. 
 
 ## What does your product do?
-SafteyProtest is a web application that helps citizens safely organize and participate in protests. Users can submit information about a new protest to alert the rest of the users or view details on a protest happening near them. The web app also provides resources to aid a user during a protest. They can mark locations with heavy police presence or the use of force to alert other users. The app provides a page with information pertaining to users' legal rights during protest for three different countries. Finally, the app also provides a list of common tips so that the user can protest safely.
+SafteProtests is a web application that helps citizens safely organize and participate in protests. Users can submit information about a new protest to alert the rest of the users or view details on a protest happening near them. The web app also provides resources to aid a user during a protest. They can mark locations with heavy police presence or the use of force to alert other users. The app provides a page with information pertaining to users' legal rights during protest for three different countries. Finally, the app also provides a list of common tips so that the user can protest safely.
 
 ## How did you build your product?
 We built our product using the MERN stack (MongoDB, Express, React and Node.js), with React for the frontend and MongoDB, Express and Node for the backend. We also used serveral npm packages and API's including Twilio's API. 
