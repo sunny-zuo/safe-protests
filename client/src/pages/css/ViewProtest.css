@@ -8,6 +8,11 @@
     margin-bottom: 0;
 }
 
+.protest-view h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .protest-info h3 {
     color: grey;
     margin: auto;
