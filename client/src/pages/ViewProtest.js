@@ -1,18 +1,20 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 import PostCard from "../components/postCard";
 
 class ViewProtest extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            protestID: "",
             protestData: ""
         }
     }
 
     componentDidMount() {
-        const { protestID } = this.props.location.state;
-        if (this.state.protestID !== "") {
+        const protestID = queryString.parse(this.props.location.search).protestID;
+        
+        if (protestID !== "") {
             console.log(`http://localhost:8000/get_protest?protestID=${protestID}`);
             fetch(`http://localhost:8000/get_protest?protestID=${protestID}`)
                 .then(response => response.json())
@@ -51,4 +53,4 @@ class ViewProtest extends Component {
     }
 }
 
-export default ViewProtest;
+export default withRouter(ViewProtest);

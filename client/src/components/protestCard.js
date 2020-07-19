@@ -4,7 +4,7 @@ import "./../pages/css/ProtestCard.css"
 
 export default function ProtestCard(props) {
     return (
-        <Link to={{ pathname: "/view-protest", state: { protestID: props._id }}}>
+        <Link to={{ pathname: "/view-protest", search: `?protestID=${props._id}`}}>
             <div className='protestCard'>
                 <h1 className="cardtitle">{props.name}</h1>
 
