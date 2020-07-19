@@ -8,6 +8,10 @@ class App extends Component {
 		users: [],
 	};
 
+	logOut = () => {
+		this.setState({ loggedIn: false });
+	};
+
 	setUser = (user) => {
 		let user_pool = this.state.users.concat(user);
 		this.setState({ users: user_pool }, () =>
@@ -23,7 +27,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<MainNav loggedIn={this.state.loggedIn} />
+				<MainNav loggedIn={this.state.loggedIn} logOut={this.logOut} />
 				<Routes
 					loggedIn={this.state.loggedIn}
 					setLogin={this.setLogin}
