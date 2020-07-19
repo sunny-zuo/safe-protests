@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Routes from "./Routes";
 import MainNav from "./pages/Navbar/MainNav";
+import Text from "./text";
 
 class App extends Component {
 	state = {
@@ -28,6 +29,7 @@ class App extends Component {
 		return (
 			<div>
 				<MainNav loggedIn={this.state.loggedIn} logOut={this.logOut} />
+				<Text />
 				<Routes
 					loggedIn={this.state.loggedIn}
 					setLogin={this.setLogin}
