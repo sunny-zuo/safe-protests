@@ -2,14 +2,13 @@ import React from "react";
 
 const AboutSafeProtests = () => {
 	return (
-		<div>
-			<h1>
-				<b>About Safe Protests</b>
+		<div >
+		<p className="text">
+			<h1 className="title">
+				About Safe Protests
 			</h1>
-			<p>
 				Safe Protests is a web app created by Carol, Rahul, Sunny and Umar for
 				Set.Hacks() 2020.{" "}
-			</p>
 			<p>
 				From the womens' suffrage movement to Martin Luther King Jr.'s rallies,
 				citizens has always relied on protests and public demonstrations to make
@@ -20,6 +19,7 @@ const AboutSafeProtests = () => {
 				organizers, information about protester rights, marking dangerous
 				locations on a live-updated map, and the ability to notify contacts with
 				a participant's last location if something goes wrong.
+			</p>
 			</p>
 		</div>
 	);
