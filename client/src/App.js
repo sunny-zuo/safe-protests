@@ -9,7 +9,9 @@ class App extends Component {
 	};
 
 	logOut = () => {
-		this.setState({ loggedIn: false });
+		this.setState({ loggedIn: false }, () =>
+			console.log("Logged In:", this.state.loggedIn)
+		);
 	};
 
 	setUser = (user) => {
