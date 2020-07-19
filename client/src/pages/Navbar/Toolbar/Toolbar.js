@@ -1,6 +1,7 @@
 import React from "react";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import "../../css/Toolbar.css";
+import TextButton from "../../../text";
 
 const toolbar = (props) => (
 	<header className="toolbar">
@@ -11,6 +12,7 @@ const toolbar = (props) => (
 				{/* send button click function to the sidedrawer button */}
 			</div>
 			<div className="spacer" />
+			<TextButton />
 		</nav>
 	</header>
 );
