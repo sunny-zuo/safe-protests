@@ -4,16 +4,11 @@ import safeprotest from "./img/safe-protests.png";
 import database from "../../server/database.js"
 
 const afterLoginMain = () => {
-    const post = new database();
-    var data = post.getProtests()
-    data.forEach((data) => {
-        // Log each protest's title
-        console.log(data.title)
-      })
     return (
 		<div className="body">
 			<div className="title-container">
 				<img src={safeprotest}></img>
+                <script src = "feed.js"></script>
 			</div>
 			<h1 className="text">
 				Feed
