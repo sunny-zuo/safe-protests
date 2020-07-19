@@ -13,7 +13,7 @@ const Main = () => {
 				Keeping people safe during protests with live updates and info
 			</p>
 
-			<div className="btn-container">
+			<div className="main-btn-container">
 				<a className="main-btn" href="/login">
 					LOG IN
 				</a>
