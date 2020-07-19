@@ -40,6 +40,8 @@ const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 				<PrivateRoute path="/terms-of-service" loggedIn={loggedIn}>
 					<TermsOfService />
 				</PrivateRoute>
+				<PrivateRoute path="/add-protest" loggedIn={loggedIn}>
+					<AddProtest />
 				<PrivateRoute path="/make-new-post" loggedIn={loggedIn}>
 					<MakeNewPost />
 				</PrivateRoute>

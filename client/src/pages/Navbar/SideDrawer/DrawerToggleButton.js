@@ -1,13 +1,12 @@
 import React from "react";
-import "./DrawerToggleButton.css";
+import "../../css/DrawerToggleButton.css";
+import buttonIcon from "../../img/menu-icon.png";
 
 const DrawerToggleButton = (props) => (
 	<button className="toggle_button" onClick={props.click}>
 		{" "}
 		{/* once click the sidedrawer will open and App.js state will be set to true */}
-		<div className="toggle_button_line" />
-		<div className="toggle_button_line" />
-		<div className="toggle_button_line" />
+		<img className="icon" src={buttonIcon} />
 	</button>
 );
 

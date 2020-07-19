@@ -24,6 +24,12 @@ const MainNav = ({ loggedIn }) => {
 					<Link to="/terms-of-service">
 						<div>Terms of Service</div>
 					</Link>
+					<Link to="/terms-of-service">
+						<div>Terms of Service</div>
+					</Link>
+					<Link to="/add-protest">
+						<div>AddProtests</div>
+					</Link>
 				</Navbar>
 			) : null}
 		</div>

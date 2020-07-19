@@ -1,7 +1,6 @@
 import React from "react";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
-import "./Toolbar.css";
-import { Link } from "react-router-dom";
+import "../../css/Toolbar.css";
 
 const toolbar = (props) => (
 	<header className="toolbar">
