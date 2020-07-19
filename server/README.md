@@ -64,25 +64,35 @@ Sample response:
 
 ```json
 {
-  "_id": "5f138ef477c747c960d6e6f1",
-  "name": "yeet",
-  "time": "2020-07-18",
-  "description": "desc",
-  "organizer": "bob",
-  "location": "Canada",
+  "_id": "5f13a19f7e4a63bc08ee37a4",
+  "name": "Colonize Mars Meeting",
+  "time": "2052-07-29",
+  "description": "Demonstration to support colonizing mars",
+  "organizer": "Not a Martian",
+  "location": "Earth",
   "status": "active",
   "protestors": [
-    "bob"
+    "Not a Martian",
+    "NotAnAilen",
+    "FlatEarther"
   ],
   "posts": [
     {
-      "username": "Sunny",
-      "title": "Hello World",
-      "body": "test post #1",
+      "username": "Not a Martian",
+      "title": "Protest created",
+      "body": "Added undefined to Safe Protests!",
+      "date": 1595122079055,
+      "image": null
+    },
+    {
+      "username": "NotAnAilen",
+      "title": "Ailen attacks",
+      "body": "I heard rumors of potential Ailen attacks. Be careful!",
+      "date": 1595122128738,
       "image": null
     }
   ],
-  "protestorCount": 1,
+  "protestorCount": 3,
   "success": true
 }
 ```
