@@ -6,7 +6,6 @@ import { Switch, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Main from "./pages/Main";
 import UserRegistration from "./pages/UserRegistration";
-import AboutSafeProjects from "./pages/AboutSafeProjects";
 import BrowseProtests from "./pages/BrowseProtests";
 import YourRights from "./pages/YourRights";
 import TermsOfService from "./pages/TermsOfService";
@@ -27,9 +26,6 @@ const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 				<Route path="/registration">
 					<UserRegistration setUser={setUser} />
 				</Route>
-				<PrivateRoute path="/about-safe-protests" loggedIn={loggedIn}>
-					<AboutSafeProjects />
-				</PrivateRoute>
 				<PrivateRoute path="/general-tips" loggedIn={loggedIn}>
 					<GeneralTips />
 				</PrivateRoute>
