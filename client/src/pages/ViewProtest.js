@@ -42,7 +42,6 @@ class ViewProtest extends Component {
                 <Link to={{ pathname: "/browse-protests" }}>
                 <div className="backarrow-container">
                     <img className="img" src={leftarrow}></img>
-                    <h2>BACK</h2>
                 </div>
                 </Link>
                 <div className="protest-info">
