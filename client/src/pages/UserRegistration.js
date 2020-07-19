@@ -107,7 +107,7 @@ class UserRegistration extends Component {
 		} else {
 			return (
 				<div className="box-wide">
-					<h1 className="head"> User Registration </h1>
+					<h1 className="title"> User Registration </h1>
 					<form onSubmit={this.submitRegistration}>
 						{/* Name Input */}
 						<p className="label"> Name </p>

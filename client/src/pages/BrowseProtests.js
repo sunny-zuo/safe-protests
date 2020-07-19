@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ProtestCard from "../components/protestCard"
 import "./css/Newsfeed.css";
 
 class BrowseProtests extends Component {
@@ -16,15 +17,17 @@ class BrowseProtests extends Component {
 	}
 
 	render() {
-		if (this.state.protestData) {
-			console.log(this.state.protestData);
+		if (this.state.protestData == "") {
+			return null;
 		}
+		
+		const Cards = this.state.protestData.map(protest => <ProtestCard {...protest} /> )
 		return (
 			<div className="newsfeed-body">
 				<h1 className="title">Latest Updates on your Protests</h1>
-				<div className="placeholder-postbox"></div>
-				<div className="placeholder-postbox"></div>
-				<div className="placeholder-postbox"></div>
+				<div className="protestCards">
+					{Cards}
+				</div>
 			</div>
 		);
 	}

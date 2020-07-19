@@ -1,9 +1,9 @@
 .sidedrawer {
 	height: 100%;
-	background: white;
+	background: #5eafab;
 	box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5); /* adds shadow to the left of drawer */
 	position: fixed;
-	top: 0;
+	top: 35px;
 	left: 0;
 	width: 70%;
 	max-width: 400px;
@@ -11,6 +11,18 @@
 	transform: translateX(-100%); /*where it starts out when closed */
 	transition: transform 0.3s ease-out;
 	text-align: center;
+}
+
+.sidebar-text {
+	color: white;
+	padding-top: 27px;
+	padding-bottom: 27px;
+	margin: 0 auto;
+	width: 100%;
+
+	align-self: stretch;
+
+	display: inline-block;
 }
 
 .sidedrawer.open {
@@ -27,6 +39,10 @@
 
 .sidedrawer div.sidedrawer_items {
 	list-style: none;
-	margin-bottom: 40px;
 	font-size: 30px;
+	width:100%;
+}
+
+.sidebar-text:hover {
+	background-color: #468a86;
 }
