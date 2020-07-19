@@ -3,20 +3,35 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 70px;
+	background-color: #88f0ea;
+	height: 80px;
 }
 
-.toolbar-nav {
-	/* display: flex; */
-	height: 100%;
+.toolbar_togglebutton {
+	position: fixed;
+	right: 0;
+	margin-right: 15px;
+	padding-right: 20px;
+}
+
+.toolbar_navigation {
+	display: flex;
 	align-items: center;
-	padding: 0.7rem 1rem;
+	height: 100%;
+	padding: 0 1rem;
+	border-bottom: gray 1px solid;
 }
 
-.profile-pic {
+.spacer {
+	flex: 1; /*takes all space occupied between logo and items */
+}
+
+div.toolbar_navigation_items {
 	float: right;
-}
-
-.sidebar-icon {
-	float: left;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: none;
+	font-size: 30px;
 }
