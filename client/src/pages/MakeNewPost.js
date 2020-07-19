@@ -34,13 +34,14 @@ class MakeNewPost extends Component {
 			title: this.state.title,
 			body: this.state.body
 		};
-		console.log(reqBody);
 		fetch("http://localhost:8000/add_post", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(reqBody),
+		}).then(() => {
+			this.props.history.push(`/view-protest?protestID=${reqBody.protestID}`);
 		});	
 	}
 

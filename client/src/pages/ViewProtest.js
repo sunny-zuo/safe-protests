@@ -31,7 +31,7 @@ class ViewProtest extends Component {
             return null;
         }
         const data = this.state.protestData;
-        const Posts = data.posts.map(post => <PostCard {...post} />)
+        const Posts = data.posts.reverse().map(post => <PostCard {...post} />)
         let ProtestorList = "";
         for (let i = 0; i < Object.keys(data.protestors); i++) {
             ProtestorList += `${data.protestors[i]}, `;

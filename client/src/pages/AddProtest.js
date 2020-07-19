@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./css/style.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
 class AddProtest extends Component {
 	constructor(props) {
@@ -51,6 +51,8 @@ class AddProtest extends Component {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(reqBody),
+		}).then(() => {
+			this.props.history.push('/browse-protests');
 		});
 	}
 
@@ -111,22 +113,19 @@ class AddProtest extends Component {
 							onChange={(e) => this.updateState({ organizer: e.target.value })}
 						></input>
 					</form>
-					<Link to="/browse-protests">
-						;"
-						<div className="btn-container">
-							<input
-								className="btn login-btn main-btn"
-								style={{ margin: "0px", padding: "0px", marginBottom: "130px" }}
-								type="button"
-								value="Add Event"
-								onClick={this.addProtest}
-							/>
-						</div>
-					</Link>
+					<div className="btn-container">
+						<input
+							className="btn login-btn main-btn"
+							style={{ margin: "0px", padding: "0px", marginBottom: "130px" }}
+							type="button"
+							value="Add Event"
+							onClick={this.addProtest}
+						/>
+					</div>
 				</div>
 			</div>
 		);
 	}
 }
 
-export default AddProtest;
+export default withRouter(AddProtest);
