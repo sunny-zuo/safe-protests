@@ -5,20 +5,20 @@ import or from "./img/or.png";
 
 const Main = () => {
 	return (
-		<div className="body">
-			<div className="title-container">
+		<div className="main-body">
+			<div className="main-title-container">
 				<img class="img" src={safeprotest}></img>
 			</div>
-			<p className="text">
+			<p className="main-text">
 				Keeping people safe during protests with live updates and info
 			</p>
 
 			<div className="btn-container">
-				<a className="btn" href="#">SIGN IN</a>
+				<a className="main-btn" href="#">SIGN IN</a>
 				<div className="or-container">
 					<img class="img" src={or}></img>
 				</div>
-				<a className="btn" href="#">REGISTER</a>
+				<a className="main-btn" href="#">REGISTER</a>
 			</div>
 		</div>
 	);
