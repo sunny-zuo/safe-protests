@@ -14,11 +14,15 @@ const Main = () => {
 			</p>
 
 			<div className="btn-container">
-				<a className="main-btn" href="#">SIGN IN</a>
+				<a className="main-btn" href="/login">
+					LOG IN
+				</a>
 				<div className="or-container">
 					<img class="img" src={or}></img>
 				</div>
-				<a className="main-btn" href="#">REGISTER</a>
+				<a href="/registration" className="main-btn">
+					REGISTER
+				</a>
 			</div>
 		</div>
 	);
