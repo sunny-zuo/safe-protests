@@ -1,5 +1,4 @@
 # Safe_Protests
-
 From the womens' suffrage movement to Martin Luther King Jr.'s rallies, citizens has always relied on protests and public demonstrations to make change happen. With recent events in mind, it is becoming apparent that protesters need a way to protect themselves and stay informed during the middle of a protest or strike. Safe Protests is an app for organizing and staying safe during protests, providing live updates from protest organizers, information about protester rights, marking dangerous locations on a live-updated map, and the ability to notify contacts with a participant's last location if something goes wrong.
 
 We are addressing the "Community" category (SDGs: 16 and 17) and the "The Environment" category (SDG: 13).
@@ -31,7 +30,6 @@ Next steps for Safe Protests:
 * Utilize the web platform to its full potential - allow the organization of online, global-scale protests.
 
 ## How to run the application
-
 1. Run `git clone https://github.com/sunny-zuo/safe-protests.git` in your command line
 2. `cd` into the project directory
 3. Open up two command lines, type `cd client` in one and `cd sever` in the other
@@ -40,6 +38,7 @@ Next steps for Safe Protests:
 6. In the "server" directory, run `node index.js` to startup the express server
 7. You're all done!
 
+## Contributions
 This project was made between July 18-20, 2020 for the SetHacks
 
 Team members:
