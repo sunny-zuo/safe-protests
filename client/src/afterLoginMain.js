@@ -10,9 +10,7 @@ const afterLoginMain = () => {
 				<img src={safeprotest}></img>
                 <script src = "feed.js"></script>
 			</div>
-			<h1 className="text">
-				Feed
-			</h1>
+			<h1 className="text">Feed</h1>
 		</div>
 	);
 };
