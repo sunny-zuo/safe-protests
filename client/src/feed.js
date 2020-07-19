@@ -2,6 +2,7 @@ import database from "../../server/database.js"
 var arr = new fetch('http://localhost:8000/get_protests?page=1')
 .then(response => response.json())
 .then(data => console.log(data));
+
 const app = document.getElementById('root')
 const container = document.createElement('div')
 container.setAttribute('class', 'container')
