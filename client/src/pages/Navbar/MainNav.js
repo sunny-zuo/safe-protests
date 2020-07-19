@@ -12,9 +12,6 @@ const MainNav = ({ loggedIn }) => {
 		<div>
 			{loggedIn ? (
 				<Navbar>
-					<Link to="/general-tips">
-						<div>General Tips</div>
-					</Link>
 					<Link to="/about-safe-protests">
 						<div>About Safe Protests</div>
 					</Link>

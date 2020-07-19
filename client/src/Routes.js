@@ -24,9 +24,6 @@ const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 				<Route path="/registration">
 					<UserRegistration setUser={setUser} />
 				</Route>
-				<PrivateRoute path="/general-tips" loggedIn={loggedIn}>
-					<GeneralTips />
-				</PrivateRoute>
 				<PrivateRoute path="/about-safe-protests" loggedIn={loggedIn}>
 					<AboutSafeProjects />
 				</PrivateRoute>
