@@ -71,17 +71,19 @@ class ViewProtest extends Component {
                 </Link>
                 <div className="protest-info">
                     <h1 className="title" style={{ fontSize: "60px" }}>{data.name}</h1>
+                    <h3>Description: {data.description}</h3>
                     <h2>Organized by: {data.organizer} | Signed up: {data.protestorCount}</h2>
                     <h2>{data.time} at {data.location}</h2>
-                    <h3>{data.description}</h3>
                     <div className="mapImage">
                         <Map apiKey="SZLflIkEANEPipmMl5DRxittr28wth6c" center={data.location} />
                     </div>
                     <p className="protestors">{ProtestorList}</p>
                 </div>
                 {this.state.signedUp ? <h3>You have successfully signed up!</h3> : <button onClick={this.signUp}>Sign Up</button>}
-                <Link to={{ pathname: "/make-new-post", search: `?protestID=${data._id}` }}><h3>Add New Post</h3></Link>
+                <hr/>
                 <div className="protest-posts">
+                    <h2>Posts</h2>
+                    <Link to={{ pathname: "/make-new-post", search: `?protestID=${data._id}` }}><button>Add New Post</button></Link>
                     {Posts}
                 </div>
             </div>
