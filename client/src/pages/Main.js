@@ -8,7 +8,6 @@ const Main = () => {
 			<div className="title-container">
 				<img src={safeprotest}></img>
 			</div>
-
 			<p className="text">
 				Keeping people safe during protests with live updates and info
 			</p>
