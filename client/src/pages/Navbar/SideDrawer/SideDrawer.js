@@ -14,7 +14,7 @@ const SideDrawer = (props) => {
 				{props.content}
 				<div className="sidedrawer_items">
 					<Link to="/logout">
-						<div>Logout</div>
+						<div className="sidebar-text">Logout</div>
 					</Link>
 				</div>
 			</div>

@@ -11,21 +11,24 @@ const MainNav = ({ loggedIn }) => {
 	return (
 		<div>
 			{loggedIn ? (
-				<Navbar>
+				<Navbar >
 					<Link to="/about-safe-protests">
-						<div>About Safe Protests</div>
+						<div class="sidebar-text">About Safe Protests</div>
 					</Link>
-					<Link to="/browse-protests">
-						<div>Browse Events</div>
-					</Link>
-					<Link to="/your-rights">
-						<div>Your Rights</div>
-					</Link>
-					<Link to="/terms-of-service">
-						<div>Terms of Service</div>
+					<Link to="/general-tips">
+						<div class="sidebar-text">Protest Tips and Advice</div>
 					</Link>
 					<Link to="/add-protest">
-						<div>AddProtests</div>
+						<div class="sidebar-text">Create Your Own Protest</div>
+					</Link>
+					<Link to="/browse-protests">
+						<div class="sidebar-text">Browse Events</div>
+					</Link>
+					<Link to="/your-rights">
+						<div class="sidebar-text">Know Your Rights</div>
+					</Link>
+					<Link to="/terms-of-service">
+						<div class="sidebar-text">Terms of Service</div>
 					</Link>
 				</Navbar>
 			) : null}
