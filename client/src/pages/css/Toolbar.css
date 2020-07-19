@@ -4,6 +4,7 @@
 	left: 0;
 	width: 100%;
 	background-color: #88f0ea;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 	height: 80px;
 	z-index: 999;
 }
@@ -16,18 +17,19 @@
 }
 
 .toolbar_navigation {
-	display: flex;
+	/* display: inline-flex; */
 	align-items: center;
 	height: 100%;
-	padding: 0 1rem;
-	border-bottom: gray 1px solid;
+	padding: 1.5rem 1rem;
+	/* border-bottom: gray 1px solid; */
+	/* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
 }
 
-.spacer {
+/* .spacer {
 	flex: 1; /*takes all space occupied between logo and items */
-}
 
-div.toolbar_navigation_items {
+
+/* div.toolbar_navigation_items {
 	float: right;
 	padding-right: 20px;
 	display: flex;
@@ -35,4 +37,24 @@ div.toolbar_navigation_items {
 	align-items: center;
 	border: none;
 	font-size: 30px;
+} */
+
+.send-text {
+	float: left;
+}
+
+.txting-btn {
+	background-color: rgb(255, 92, 28);
+	color: white;
+	height: 30px;
+	border-color: rgb(255, 92, 28);
+}
+
+.txting-btn:hover {
+	background-color: red;
+	cursor: pointer;
+}
+
+.toggle-button {
+	float: right;
 }

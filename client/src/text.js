@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./pages/css/Toolbar.css";
 
 class Text extends Component {
 	state = {
@@ -18,8 +19,8 @@ class Text extends Component {
 
 	render() {
 		return (
-			<div>
-				<button onClick={this.sendText}> Send Text </button>
+			<div class="send-text">
+				<button class="txting-btn" onClick={this.sendText}> Send Text </button>
 			</div>
 		);
 	}
