@@ -13,6 +13,7 @@ import TermsOfService from "./pages/TermsOfService";
 import AddProtest from "./pages/AddProtest";
 import MakeNewPost from "./pages/MakeNewPost";
 import GeneralTips from "./pages/GeneralTips";
+import ViewProtest from "./pages/ViewProtest";
 
 const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 	return (
@@ -49,6 +50,9 @@ const Routes = ({ loggedIn, setLogin, setUser, users }) => {
 				</PrivateRoute>
 				<PrivateRoute path="/make-new-post" loggedIn={loggedIn}>
 					<MakeNewPost />
+				</PrivateRoute>
+				<PrivateRoute path="/view-protest" loggedIn={loggedIn}>
+					<ViewProtest />
 				</PrivateRoute>
 			</Switch>
 		</main>
