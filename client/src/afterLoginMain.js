@@ -1,13 +1,13 @@
 import React from "react";
 import "./css/Main.css";
 import safeprotest from "./img/safe-protests.png";
-import database from "database"
+import database from "../../server/database.js"
 
 const afterLoginMain = () => {
     const post = new database();
     var data = post.getProtests()
     data.forEach((data) => {
-        // Log each movie's title
+        // Log each protest's title
         console.log(data.title)
       })
     return (
