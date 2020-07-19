@@ -3,9 +3,11 @@ import React from "react";
 const TermsOfService = () => {
 	return (
 		<div className="body">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
 			<p className="text" style={{ textAlign: "left" }}>
-				{" "}
-				<h1 className="title">Terms of Service</h1>
+				{""}
+				<h1 className="title">Terms of Service</h1> 
+				<i class="material-icons md-48" >gavel</i>
 				<p>Welcome to Safe Protests!</p>
 				<p>
 					These terms and conditions outline the rules and regulations for the
