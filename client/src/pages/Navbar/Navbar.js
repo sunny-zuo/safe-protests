@@ -41,6 +41,7 @@ class Navbar extends React.Component {
 				<SideDrawer
 					show={this.state.sideDrawerOpen}
 					content={sidedrawerContent}
+					logOut={this.props.logOut}
 				/>{" "}
 				{/*when show is true, sideDrawer appears, when it is false it dissapears*/}
 				{backdrop}

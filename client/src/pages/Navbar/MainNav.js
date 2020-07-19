@@ -7,11 +7,12 @@ import Navbar from "./Navbar";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MainNav = ({ loggedIn }) => {
+const MainNav = ({ loggedIn, logOut }) => {
 	return (
 		<div>
 			{loggedIn ? (
-				<Navbar >
+
+				<Navbar logOut={logOut}>
 					<Link to="/about-safe-protests">
 						<div class="sidebar-text">About Safe Protests</div>
 					</Link>

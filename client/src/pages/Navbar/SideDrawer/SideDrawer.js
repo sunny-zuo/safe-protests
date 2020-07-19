@@ -13,7 +13,8 @@ const SideDrawer = (props) => {
 			<div className="container">
 				{props.content}
 				<div className="sidedrawer_items">
-					<Link to="/logout">
+
+					<Link to="/" onClick={props.logOut}>
 						<div className="sidebar-text">Logout</div>
 					</Link>
 				</div>
