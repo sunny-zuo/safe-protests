@@ -22,7 +22,7 @@ We initially wanted to create a mobile app using Android Studio, Kotlin and Flut
 We're proud of our REST API server, which efficiently inserts and retrieves data from MongoDB to run all of the processes for the app. We're also proud of our integration with Twilio to send text messages as part of our "Emergency Button" feature, which sends a protester's chosen contact a message if the protester is injured, being detained etc.
 
 ## What did you learn through this process?
-We learned how to effectively setup Mongo for a database. 
+We learned how to effectively setup MongoDB, use twilio API, use Express & Node.js, etc.
 
 ## What's next for your product?
 Next steps for Safe Protests: 
