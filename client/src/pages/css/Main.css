@@ -1,20 +1,22 @@
 .body {
+
     text-align: center;
     background-image: url("./../img/protesters.png");
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 .title-container {
-    padding: 20px;
+	padding: 20px;
 }
 
 .text {
-    margin: auto;
-    width: 80%;
-    font-size: 30px;
-    color: white;
-    text-shadow: black;
+	margin: auto;
+	width: 80%;
+	font-size: 30px;
+	color: white;
+	text-shadow: black;
 }
 
 .btn {
