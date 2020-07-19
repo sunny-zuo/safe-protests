@@ -112,7 +112,8 @@ class AddProtest extends Component {
 					</form>
 					<div className="btn-container">
 						<input
-							className="btn login-btn"
+							className="btn login-btn main-btn"
+							style={{margin: "0px", padding: "0px", marginBottom: "130px"}}
 							type="button"
 							value="Add Event"
 							onClick={this.addProtest}

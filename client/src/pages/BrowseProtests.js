@@ -21,7 +21,7 @@ class BrowseProtests extends Component {
 		}
 		return (
 			<div className="newsfeed-body">
-				<h1 className="title">This is the Browse Protests page</h1>
+				<h1 className="title">Latest Updates on your Protests</h1>
 				<div className="placeholder-postbox"></div>
 				<div className="placeholder-postbox"></div>
 				<div className="placeholder-postbox"></div>
