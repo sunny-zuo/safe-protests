@@ -17,7 +17,7 @@ class ViewProtest extends Component {
 
     componentDidMount() {
         const protestID = queryString.parse(this.props.location.search).protestID;
-        
+
         if (protestID !== "") {
             console.log(`http://localhost:8000/get_protest?protestID=${protestID}`);
             fetch(`http://localhost:8000/get_protest?protestID=${protestID}`)
@@ -40,13 +40,12 @@ class ViewProtest extends Component {
         return (
             <div className="protest-view">
                 <Link to={{ pathname: "/browse-protests" }}>
-                <div className="backarrow-container">
-                    <img className="img" src={leftarrow}></img>
-                    <h2>BACK</h2>
-                </div>
+                    <div className="backarrow-container">
+                        <img className="img" src={leftarrow}></img>
+                    </div>
                 </Link>
                 <div className="protest-info">
-                    <h1 className="title" style={{fontSize: "60px"}}>{data.name}</h1>
+                    <h1 className="title" style={{ fontSize: "60px" }}>{data.name}</h1>
                     <h2>{data.organizer}</h2>
                     <h2>{data.time} at {data.location}</h2>
                     <h3>{data.description}</h3>
@@ -55,6 +54,7 @@ class ViewProtest extends Component {
                     </div>
                     <p className="protestors">{ProtestorList}</p>
                 </div>
+                <Link to={{ pathname: "/make-new-post", search: `?protestID=${data._id}` }}><h3>Add New Post</h3></Link>
                 <div className="protest-posts">
                     {Posts}
                 </div>

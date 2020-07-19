@@ -17,7 +17,7 @@ export default function ProtestCard(props) {
                     <h4>{props.description}</h4>
                     <h3>Organizers: {props.organizer}</h3>
                     <h3>Signed up: {props.protestorCount}</h3>
-                    <h3>Status: ${props.status}</h3>
+                    <h3>Status: {props.status}</h3>
                 </div>
             </div>
         </Link>

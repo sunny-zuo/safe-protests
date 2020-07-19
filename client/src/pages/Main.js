@@ -32,12 +32,12 @@ const Main = () => {
 
 				<p className="text">
 				<h1 className="title">
-					About Safe Protests 
+					About Safe Protests <br/>
 					<i class="material-icons md-48">code</i>
 				</h1>
 					Safe Protests is a web app created by Carol, Rahul, Sunny and Umar for
 					Set.Hacks() 2020.{" "}
-				<p style={{paddingBottom: "250px"}}>
+				<p style={{paddingBottom: "50px"}}>
 					From the womens' suffrage movement to Martin Luther King Jr.'s rallies,
 					citizens has always relied on protests and public demonstrations to make
 					change happen. With recent events in mind, it is becoming apparent that

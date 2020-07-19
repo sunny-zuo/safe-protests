@@ -16,6 +16,7 @@
     width: 50%;
     padding: 15px;
     line-height: 60px;
+    color: #000b3d;
 }
 
 .cardtitle-container {
@@ -28,6 +29,7 @@
     width: 45%;
     text-align: left;
     float: right;
+    color: #000b3d;
 }
 
 .card-subinfo {
