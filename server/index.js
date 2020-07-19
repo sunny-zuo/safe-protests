@@ -58,6 +58,19 @@ app.get('/get_protests', async (req, res) => {
     }
 });
 
+app.get('/get_protest', async (req, res) => {
+    if (req.query.protestID) {
+        try {
+            let data = await database.getProtest(req.query.protestID);
+            data.protestorCount = Object.keys(data.protestors).length;
+            data.success = true;
+            res.status(200).send(data);
+        } catch (err) {
+            res.status(503).send({ success: false, msg: 'Internal Server Error' });
+        }
+    }
+})
+
 app.post('/join_protest', function (req, res, next) {
     // check if input is JSON
     if (req.is('application/json')) {

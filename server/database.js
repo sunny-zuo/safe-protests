@@ -27,7 +27,17 @@ async function insertProtest(obj) {
 async function getProtests(page = 0) {
     return new Promise((resolve, reject) => {
         const collection = db.collection("protests");
-        collection.find().project().skip(page).sort({ _id: -1 }).limit(10).toArray(function (err, res) {
+        collection.find().skip(page).sort({ _id: -1 }).limit(10).toArray(function (err, res) {
+            if (err) reject(err);
+            resolve(res);
+        });
+    });
+}
+
+async function getProtest(protestID) {
+    return new Promise((resolve, reject) => {
+        const collection = db.collection("protests");
+        collection.findOne({ _id: ObjectID(protestID) }, function (err, res) {
             if (err) reject(err);
             resolve(res);
         });
@@ -44,3 +54,4 @@ async function addProtestUser(username, protestID) {
 exports.addProtestUser = addProtestUser;
 exports.insertProtest = insertProtest;
 exports.getProtests = getProtests;
+exports.getProtest = getProtest;
