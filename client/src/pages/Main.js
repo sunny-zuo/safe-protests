@@ -9,7 +9,9 @@ const Main = () => {
 				<img src={safeprotest}></img>
 			</div>
 
-			<p className="text">Keeping people safe during protests with live updates and info</p>
+			<p className="text">
+				Keeping people safe during protests with live updates and info
+			</p>
 		</div>
 	);
 };
