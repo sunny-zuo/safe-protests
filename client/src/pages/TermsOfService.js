@@ -3,7 +3,7 @@ import React from "react";
 const TermsOfService = () => {
 	return (
 		<div className="body">
-			<p className="text">
+			<p className="text" style={{textAlign: 'left'}}>
 				{" "}
 				<h1 className="title">Terms of Service</h1>
 			
