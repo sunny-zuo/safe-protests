@@ -91,20 +91,19 @@ class AddProtest extends Component {
 							onChange={(e) => this.updateState({ location: e.target.value })}
 						></input>
 						<h2 className="subtitle">4. Add a description!</h2>
-						<input
-							type="textarea"
+						<textarea
+							type="text"
 							id="desc"
-							style={{ height: "200px" }}
+							style={{ height: "140px", width: "300px", fontSize: "15px", fontFamily: "Work Sans" }}
 							name="desc"
 							placeholder=""
 							value={this.state.description}
 							onChange={(e) =>
 								this.updateState({ description: e.target.value })
 							}
-						></input>
+						></textarea>
 
-						{/* If we are to add this section we'd have to get database of user profiles */}
-						<h2 className="subtitle">X. Add Organizers:</h2>
+						<h2 className="subtitle">5. Add Organizers:</h2>
 						<input
 							type="text"
 							className="input-field"

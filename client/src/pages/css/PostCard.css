@@ -13,3 +13,7 @@
     text-decoration: underline;
     padding: 0;
 }
+
+.postCard h4 {
+    margin: auto;
+}
