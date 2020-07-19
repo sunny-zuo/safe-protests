@@ -1,40 +1,54 @@
 .protestCard {
-    background-color: white;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin: 20px auto;
-    padding: 10px;
-    padding-left: 5%;
-    padding-right: 5%;
-    text-align: center;
+	background-color: white;
+	width: 80%;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	margin: 20px auto;
+	padding: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+h1.cardtitle {
+	font-size: 40px;
+}
+
+div h2 {
+	font-size: 20px;
+	color: black;
+	margin-right: 60px;
+}
+
+h3,
+h4 {
+	margin-left: 260px;
 }
 
 .cardtitle {
-    margin: 0 auto;
-    font-size: 60px;
-    width: 50%;
-    padding: 15px;
-    line-height: 60px;
-    color: #000b3d;
+	margin: 0 auto;
+	font-size: 60px;
+	width: 50%;
+	padding: 15px;
+	line-height: 60px;
+	color: #000b3d;
 }
 
 .cardtitle-container {
-    min-height: 120px;
-    justify-content: center;
+	min-height: 120px;
+	justify-content: center;
 }
 
 .dateloc-container {
-    margin: auto;
-    width: 45%;
-    text-align: left;
-    float: right;
-    color: #000b3d;
+	margin: auto;
+	width: 45%;
+	text-align: left;
+	float: right;
+	color: #000b3d;
 }
 
 .card-subinfo {
-    color: grey;
-    width: 50%;
-    text-align: left;
+	color: grey;
+	width: 50%;
+	text-align: left;
 }
-
