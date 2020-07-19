@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import queryString from 'query-string';
 import PostCard from "../components/postCard";
+import "./css/ViewProtest.css";
+import leftarrow from "./img/left.png";
+import { Link } from "react-router-dom";
 
 class ViewProtest extends Component {
     constructor(props) {
@@ -35,6 +38,12 @@ class ViewProtest extends Component {
         // You can find all of the fields in the response in the README in the server folder
         return (
             <div className="protest-view">
+                <Link to={{ pathname: "/browse-protests" }}>
+                <div className="backarrow-container">
+                    <img className="img" src={leftarrow}></img>
+                    <h2>BACK</h2>
+                </div>
+                </Link>
                 <div className="protest-info">
                     <h1 className="title" style={{fontSize: "60px"}}>{data.name}</h1>
                     <h2>{data.organizer}</h2>

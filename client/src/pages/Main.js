@@ -25,6 +25,8 @@ const Main = () => {
 						REGISTER
 					</a>
 				</div>
+
+				
 			</div>
 
 				<p className="text">
