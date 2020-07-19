@@ -8,8 +8,8 @@ app.use(cors());
 app.use(express.json());
 
 //twilio requirements --texting
-const accountSid = "AC12e3a63e1e3612d73a436e43321a03f3";
-const authToken = "45e67ada977d08b9f89b3626f31df935";
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
 const client = new twilio(accountSid, authToken);
 
 app.post("/add_protest", function (req, res, next) {
@@ -146,8 +146,6 @@ app.post("/add_post", function (req, res) {
 		res.status(403).send("Request body did not contain all needed information");
 	}
 });
-
-app.listen(4000, () => console.log("Running on Port 4000"));
 
 app.listen(8000);
 
