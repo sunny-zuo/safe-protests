@@ -4,6 +4,8 @@ From the womens' suffrage movement to Martin Luther King Jr.'s rallies, citizens
 
 We are addressing the "Community" category (SDGs: 16 and 17) and the "The Environment" category (SDG: 13).
 
+Video Demo:
+
 ## What inspired you to make this product?
 We were inspired by the recent BLM protests around the world after the death of George Floyd at the hand of a police officer. We wanted to create a web app that was able to help citizens safely practice their right to free speech and protest. 
 
@@ -29,7 +31,7 @@ Next steps for Safe Protests:
 
 ## How to run the application
 
-1. Run `git clone` in your command line
+1. Run `git clone https://github.com/sunny-zuo/safe-protests.git` in your command line
 2. `cd` into the project directory
 3. Open up two command lines, type `cd client` in one and `cd sever` in the other
 4. In each command line execute the command `npm i` to install all the required dependencies and packages
