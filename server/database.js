@@ -21,7 +21,7 @@ async function insertProtest(obj) {
     data.posts = [{
         username: data.organizer,
         title: 'Protest created',
-        body: `Added ${data.title} to Safe Protests!`,
+        body: `Added ${data.name} to Safe Protests!`,
         date: Date.now(),
         image: null
     }]
