@@ -11,7 +11,6 @@ const MainNav = ({ loggedIn, logOut }) => {
 	return (
 		<div>
 			{loggedIn ? (
-
 				<Navbar logOut={logOut}>
 					<Link to="/general-tips">
 						<div class="sidebar-text">Protest Tips and Advice</div>
@@ -20,7 +19,7 @@ const MainNav = ({ loggedIn, logOut }) => {
 						<div class="sidebar-text">Create Your Own Protest</div>
 					</Link>
 					<Link to="/browse-protests">
-						<div class="sidebar-text">Browse Events</div>
+						<div class="sidebar-text">Browse Protests</div>
 					</Link>
 					<Link to="/your-rights">
 						<div class="sidebar-text">Know Your Rights</div>

@@ -6,6 +6,7 @@ import or from "./img/or.png";
 const Main = () => {
 	return (
 		<div>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
 			<div className="main-body">
 				<div className="main-title-container">
 					<img class="img" src={safeprotest}></img>
@@ -31,7 +32,8 @@ const Main = () => {
 
 				<p className="text">
 				<h1 className="title">
-					About Safe Protests
+					About Safe Protests 
+					<i class="material-icons md-48">code</i>
 				</h1>
 					Safe Protests is a web app created by Carol, Rahul, Sunny and Umar for
 					Set.Hacks() 2020.{" "}
@@ -45,7 +47,9 @@ const Main = () => {
 					organizers, information about protester rights, marking dangerous
 					locations on a live-updated map, and the ability to notify contacts with
 					a participant's last location if something goes wrong.
+					
 				</p>
+				<img src="https://media4.s-nbcnews.com/j/newscms/2020_26/3392396/200624-blm-protest-jm-1402_cbd89c5bb57ab5b92c133713bac6adab.fit-760w.jpg" style={{float: 'center', marginBottom: '100px', marginTop: "0px"}} alt="Mlk"></img>
 			</p>
 		</div>
 	);
