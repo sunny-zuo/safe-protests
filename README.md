@@ -21,20 +21,20 @@ We initially wanted to create a mobile app using Android Studio, Kotlin and Flut
 We're proud of our REST API server, which efficiently inserts and retrieves data from MongoDB to run all of the processes for the app. We're also proud of our integration with Twilio to send text messages as part of our "Emergency Button" feature, which sends a protester's chosen contact a message if the protester is injured, being detained etc. Furthermore, we are proud of the fact that we built our application's user interface from scratch, we didn't use any templates, styling packages or dependencies to design our project. 
 
 ## What did you learn through this process?
-We learned how to effectively setup MongoDB, use twilio API, create an Express server, route in React.
+We learned how to effectively setup MongoDB, use twilio API, create an Express server, and route in React.
 
 ## What's next for your product?
 Next steps for Safe Protests: 
-* Deploy our web app to Android and iOS. 
+* Deploy our web app to Android and iOS. (the website is responsive and mobile friendly, but a native app would be a plus)
 * Expand the features available in the app (automated alerts in the case of police violence during rally's. 
 * Utilize the web platform to its full potential - allow the organization of online, global-scale protests.
 
 ## How to run the application
 1. Run `git clone https://github.com/sunny-zuo/safe-protests.git` in your command line
 2. `cd` into the project directory
-3. Open up two command lines, type `cd client` in one and `cd sever` in the other
+3. Open up two command lines, type `cd client` in one and `cd server` in the other
 4. In each command line execute the command `npm i` to install all the required dependencies and packages
-5. In the "client" directory, run `npm start` to initate the React development server
+5. In the "client" directory, run `npm start` to initiate the React development server
 6. In the "server" directory, run `node index.js` to startup the express server
 7. You're all done!
 
