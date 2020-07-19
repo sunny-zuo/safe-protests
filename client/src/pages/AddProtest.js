@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./css/style.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from "react-router-dom";
 
 class AddProtest extends Component {
 	constructor(props) {
@@ -110,15 +111,18 @@ class AddProtest extends Component {
 							onChange={(e) => this.updateState({ organizer: e.target.value })}
 						></input>
 					</form>
-					<div className="btn-container">
-						<input
-							className="btn login-btn main-btn"
-							style={{margin: "0px", padding: "0px", marginBottom: "130px"}}
-							type="button"
-							value="Add Event"
-							onClick={this.addProtest}
-						/>
-					</div>
+					<Link to="/browse-protests">
+						;"
+						<div className="btn-container">
+							<input
+								className="btn login-btn main-btn"
+								style={{ margin: "0px", padding: "0px", marginBottom: "130px" }}
+								type="button"
+								value="Add Event"
+								onClick={this.addProtest}
+							/>
+						</div>
+					</Link>
 				</div>
 			</div>
 		);
