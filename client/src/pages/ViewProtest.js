@@ -11,19 +11,44 @@ class ViewProtest extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            protestData: ""
+            protestData: "",
+            protestID: "",
+            signedUp: false
         }
+
+        this.signUp = this.signUp.bind(this);
     }
 
     componentDidMount() {
         const protestID = queryString.parse(this.props.location.search).protestID;
 
         if (protestID !== "") {
-            console.log(`http://localhost:8000/get_protest?protestID=${protestID}`);
             fetch(`http://localhost:8000/get_protest?protestID=${protestID}`)
                 .then(response => response.json())
-                .then(data => this.setState({ protestData: data }));
+                .then(data => this.setState({ protestData: data, protestID: protestID }));
         }
+    }
+
+    componentDidUpdate() {
+        if (this.state.protestID !== "") {
+            fetch(`http://localhost:8000/get_protest?protestID=${this.state.protestID}`)
+                .then(response => response.json())
+                .then(data => this.setState({ protestData: data, protestID: this.state.protestID }));
+        }
+    }
+
+    signUp() {
+        const reqBody = {
+            'protestID': this.state.protestID,
+            'username': 'anon'
+        }
+        fetch(`http://localhost:8000/join_protest`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(reqBody)
+        }).then(this.setState({ signedUp: true }));
     }
 
     render() {
@@ -46,7 +71,7 @@ class ViewProtest extends Component {
                 </Link>
                 <div className="protest-info">
                     <h1 className="title" style={{ fontSize: "60px" }}>{data.name}</h1>
-                    <h2>{data.organizer}</h2>
+                    <h2>Organized by: {data.organizer} | Signed up: {data.protestorCount}</h2>
                     <h2>{data.time} at {data.location}</h2>
                     <h3>{data.description}</h3>
                     <div className="mapImage">
@@ -54,6 +79,7 @@ class ViewProtest extends Component {
                     </div>
                     <p className="protestors">{ProtestorList}</p>
                 </div>
+                {this.state.signedUp ? <h3>You have successfully signed up!</h3> : <button onClick={this.signUp}>Sign Up</button>}
                 <Link to={{ pathname: "/make-new-post", search: `?protestID=${data._id}` }}><h3>Add New Post</h3></Link>
                 <div className="protest-posts">
                     {Posts}
