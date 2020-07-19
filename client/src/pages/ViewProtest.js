@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
+import { Map } from '@joeattardi/react-mapquest-static-map';
 import queryString from 'query-string';
 import PostCard from "../components/postCard";
 
@@ -38,10 +39,10 @@ class ViewProtest extends Component {
                 <div className="protest-info">
                     <h1 className="title" style={{fontSize: "60px"}}>{data.name}</h1>
                     <h2>{data.organizer}</h2>
-                    <h2>{data.date} at {data.location}</h2>
+                    <h2>{data.time} at {data.location}</h2>
                     <h3>{data.description}</h3>
                     <div className="mapImage">
-                        <p>eventually there will be an image of the map here and this is a placeholder</p>
+                        <Map apiKey="SZLflIkEANEPipmMl5DRxittr28wth6c" center={data.location} />
                     </div>
                     <p className="protestors">{ProtestorList}</p>
                 </div>
