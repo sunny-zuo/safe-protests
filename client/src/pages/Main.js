@@ -44,6 +44,7 @@ const Main = () => {
 					locations on a live-updated map, and the ability to notify contacts with
 					a participant's last location if something goes wrong.
 				</p>
+				<img src="https://media4.s-nbcnews.com/j/newscms/2020_26/3392396/200624-blm-protest-jm-1402_cbd89c5bb57ab5b92c133713bac6adab.fit-760w.jpg" style={{float: 'center'}} alt="Mlk"></img>
 			</p>
 		</div>
 	);
