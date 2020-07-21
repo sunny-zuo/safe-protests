@@ -75,7 +75,7 @@ class ViewProtest extends Component {
                     <h2>Organized by: {data.organizer} | Signed up: {data.protestorCount}</h2>
                     <h2>{data.time} at {data.location}</h2>
                     <div className="mapImage">
-                        <Map apiKey="SZLflIkEANEPipmMl5DRxittr28wth6c" center={data.location} />
+                        <Map apiKey={process.env.REACT_APP_MAPQUEST_API_KEY} center={data.location} />
                     </div>
                     <p className="protestors">{ProtestorList}</p>
                 </div>

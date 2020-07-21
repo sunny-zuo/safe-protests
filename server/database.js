@@ -2,7 +2,7 @@ const dotenv = require('dotenv').config();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 
-const url = `mongodb+srv://admin:${process.env.DB_PASSWORD}@safeprotests.yx0su.mongodb.net/db?retryWrites=true&w=majority`;
+const url = process.env.DB_URL;
 
 // Create a new MongoClient
 const mongoClient = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });

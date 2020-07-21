@@ -9,8 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 //twilio requirements --texting
-const accountSid = process.env.ACCOUNT_SID;
-const authToken = process.env.AUTH_TOKEN;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = new twilio(accountSid, authToken);
 
 //Twilio Text
