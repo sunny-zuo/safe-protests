@@ -35,8 +35,10 @@ Next steps for Safe Protests:
 3. Open up two command lines, type `cd client` in one and `cd server` in the other
 4. In each command line execute the command `npm i` to install all the required dependencies and packages
 5. In the "client" directory, run `npm start` to initiate the React development server
-6. In the "server" directory, run `node index.js` to startup the express server
-7. You're all done!
+6. The client depends on the MapQuest API for map display. Add your MapQuest API key to the .env in the client directory
+7. In the "server" directory, run `node index.js` to startup the express server
+8. The server depends on a mongoDB database for data storage, and the Twilio API for sending texts. Those can also be configured in the .env
+9. You're all done!
 
 ## Contributions
 This project was made between July 18-20, 2020 for the SetHacks
